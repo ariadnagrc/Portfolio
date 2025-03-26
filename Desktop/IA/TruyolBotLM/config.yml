@@ -1,0 +1,53 @@
+recipe: default.v1
+assistant_id: 20250320-161938-gentle-property
+language: es
+
+#################################################################################
+#################################################################################
+# Procesa el texto del usuario para extraer significado (intenciones y entidades)
+pipeline:
+  # Divide el texto en palabras/tokens usando espacios en blanco
+  - name: "WhitespaceTokenizer"
+
+  # Identifica patrones específicos en el texto usando expresiones regulares
+  - name: "RegexFeaturizer"
+
+  # Ayuda al modelo a entender patrones gramaticales simples
+  - name: "LexicalSyntacticFeaturizer"
+
+  # Detecta similitudes entre palabras parecidas aunque no sean idénticas
+  - name: "CountVectorsFeaturizer"
+    analyzer: "char_wb" # Captura raíces de palabras y prefijos/sufijos comunes
+    min_ngram: 1 # Analiza un mínimo de 1 char
+    max_ngram: 4 # Analiza un máximo de 4 char
+
+  # Aprende que estas frases son similares aunque usen palabras distintas
+  - name: "DIETClassifier"
+
+  # Convierte diferentes formas de decir lo mismo en una sola palabra estándar que el bot entiende
+  - name: "EntitySynonymMapper"
+
+  # Maneja casos donde el modelo no está seguro de la intención del usuario
+  - name: "FallbackClassifier"
+    threshold: 0.4  # Nivel de confianza mínimo para activar el fallback
+    ambiguity_threshold: 0.1  # Nivel de ambigüedad aceptable antes de activar el fallback
+
+#################################################################################
+#################################################################################
+# Deciden qué acción tomar (ej: responder, preguntar, ejecutar código)
+policies:
+  # Memoriza conversaciones de entrenamiento palabra por palabra y las reproduce exactamente cuando ve mensajes idénticos
+  - name: MemoizationPolicy
+
+  # Predice la próxima acción basándose en el contexto de la conversación usando un modelo de transformer
+  - name: TEDPolicy
+    max_history: 5  # Considera los últimos 5 mensajes como contexto
+    epochs: 200  # Número de iteraciones de entrenamiento
+
+  # Ejecuta acciones predefinidas cuando se cumplen condiciones específicas, ignorando predicciones del modelo si es necesario
+  - name: RulePolicy
+    core_fallback_threshold: 0.8  # Umbral de confianza para fallback
+    core_fallback_action_name: "utter_default_fallback"  # Acción de fallback
+    enable_fallback_prediction: true  # Permite activar fallback
+    restrict_rules: true  # Aplica estrictamente las reglas
+    check_for_contradictions: true  # Verifica conflictos entre reglas

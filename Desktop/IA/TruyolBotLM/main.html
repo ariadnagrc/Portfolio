@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truyol - Impresión bajo demanda</title>
+    <style>
+        /* Estilos generales */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #333;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .user-actions a {
+            margin-left: 15px;
+            font-weight: 500;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Configurador de Productos */
+        .product-form-container {
+            display: none;
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .form-section h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-option input {
+            margin-right: 8px;
+        }
+        
+        .product-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .product-option {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .product-option:hover {
+            border-color: var(--primary);
+            background-color: #f9f9f9;
+        }
+        
+        .product-option.selected {
+            border-color: var(--primary);
+            background-color: #e3f2fd;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1a2634;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px 20px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Chatbot Styles */
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--secondary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border: none;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        .chatbot-container {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        
+        .chatbot-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            font-size: 14px;
+        }
+        
+        .chatbot-input-container {
+            display: flex;
+            padding: 10px;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        
+        .chatbot-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            font-family: inherit;
+        }
+        
+        .chatbot-send {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 0 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .chatbot-send:hover {
+            background-color: #c0392b;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            clear: both;
+        }
+        
+        .bot-message {
+            background: #e3f2fd;
+            padding: 10px 15px;
+            border-radius: 15px 15px 15px 0;
+            float: left;
+            max-width: 80%;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .user-message {
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 15px 15px 0 15px;
+            float: right;
+            max-width: 80%;
+            margin-bottom: 10px;
+        }
+        
+        .chatbot-active {
+            display: flex;
+        }
+        
+        /* Páginas */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .product-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .chatbot-container {
+                width: 90%;
+                right: 5%;
+                bottom: 80px;
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#" onclick="showPage('home')">
+                    <img src="https://truyol.com/wp-content/uploads/2023/05/logo-truyol.svg" alt="Truyol">
+                </a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Inicio</a></li>
+                    <li><a href="#" onclick="showPage('products')">Productos</a></li>
+                    <li><a href="#" onclick="showPage('configurator')">Configurador</a></li>
+                    <li><a href="#">Cómo funciona</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions">
+                <a href="#">Iniciar sesión</a>
+                <a href="#" class="btn">Crear cuenta</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Página de Inicio -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Impresión bajo demanda para creadores</h1>
+            <p>Imprime y vende tus libros, revistas y productos personalizados sin stock inicial ni inversión</p>
+            <a href="#" class="btn" onclick="showPage('configurator')">Configurar producto</a>
+        </section>
+    </div>
+    
+    <!-- Página de Productos -->
+    <div id="products" class="page">
+        <section class="categories" style="margin-top: 30px;">
+            <h2>Nuestros Productos</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Selecciona un producto para personalizarlo</p>
+        </section>
+    </div>
+    
+    <!-- Página del Configurador -->
+    <div id="configurator" class="page">
+        <div class="product-form-container" style="display: block; margin-top: 30px; margin-bottom: 50px;">
+            <h2>Configura tu producto</h2>
+            
+            <div class="form-section">
+                <h3>Selección de producto</h3>
+                
+                <div class="product-options">
+                    <div class="product-option" onclick="selectProduct(this, 'libro')">
+                        <h4>Libro</h4>
+                        <p>Publicación tradicional</p>
+                    </div>
+                    <div class="product-option" onclick="selectProduct(this, 'revista')">
+                        <h4>Revista</h4>
+                        <p>Publicación periódica</p>
+                    </div>
+                    <div class="product-option" onclick="selectProduct(this, 'folleto')">
+                        <h4>Folleto</h4>
+                        <p>Material promocional</p>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" min="1" value="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="paginas">Número de páginas:</label>
+                    <input type="number" id="paginas" min="1" value="50">
+                </div>
+                
+                <div class="form-group">
+                    <label for="lomo">Centímetros de lomo:</label>
+                    <input type="text" id="lomo" placeholder="Ej: 2.5 cm">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formato">Formato:</label>
+                    <select id="formato">
+                        <option value="A4">A4 (210 × 297 mm)</option>
+                        <option value="A5">A5 (148 × 210 mm)</option>
+                        <option value="DL">DL (99 × 210 mm)</option>
+                        <option value="personalizado">Personalizado</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="encuadernacion">Encuadernación:</label>
+                    <select id="encuadernacion">
+                        <option value="rustica">Rústica</option>
+                        <option value="tapa-dura">Tapa dura</option>
+                        <option value="espiral">Espiral</option>
+                        <option value="grapada">Grapada</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Interior</h3>
+                
+                <div class="form-group">
+                    <label for="soporte-interior">Tipo de soporte:</label>
+                    <select id="soporte-interior">
+                        <option value="estucado-brillo">Estucado brillo</option>
+                        <option value="estucado-mate">Estucado mate</option>
+                        <option value="offset">Offset</option>
+                        <option value="reciclado">Reciclado</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Color:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="color-interior" name="color-interior" value="color" checked>
+                            <label for="color-interior">A color</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="bw-interior" name="color-interior" value="blanco-negro">
+                            <label for="bw-interior">Blanco y negro</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Cubierta</h3>
+                
+                <div class="form-group">
+                    <label for="soporte-cubierta">Tipo de soporte:</label>
+                    <select id="soporte-cubierta">
+                        <option value="estucado-brillo">Estucado brillo</option>
+                        <option value="estucado-mate">Estucado mate</option>
+                        <option value="cartulina">Cartulina</option>
+                        <option value="kraft">Kraft</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Color:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="color-cubierta" name="color-cubierta" value="color" checked>
+                            <label for="color-cubierta">A color</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="bw-cubierta" name="color-cubierta" value="blanco-negro">
+                            <label for="bw-cubierta">Blanco y negro</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="impresion-cubierta">Impresión:</label>
+                    <select id="impresion-cubierta">
+                        <option value="1-cara">1 cara</option>
+                        <option value="2-caras">2 caras</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button class="submit-btn" onclick="submitForm()">Generar presupuesto</button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Productos</h3>
+                <ul>
+                    <li><a href="#" onclick="showPage('configurator')">Libros</a></li>
+                    <li><a href="#" onclick="showPage('configurator')">Revistas</a></li>
+                    <li><a href="#" onclick="showPage('configurator')">Folletos</a></li>
+                    <li><a href="#" onclick="showPage('configurator')">Cuadernos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Empresa</h3>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Cómo funciona</a></li>
+                    <li><a href="#">Precios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>info@truyol.com</li>
+                    <li>+34 123 456 789</li>
+                    <li>Madrid, España</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Truyol. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón del Chatbot -->
+    <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+    
+    <!-- Contenedor del Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <span>Asistente de Truyol</span>
+            <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message">
+
+            </div>
+        </div>
+        <div class="chatbot-input-container">
+            <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Escribe tu mensaje..." onkeypress="handleChatbotKeyPress(event)">
+            <button class="chatbot-send" onclick="sendChatbotMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // URL de tu servidor Rasa (ajusta según tu configuración)
+        const RASA_SERVER_URL = 'http://localhost:5005/webhooks/rest/webhook';
+        // ID de sesión único para el usuario
+        const SESSION_ID = 'user_' + Math.random().toString(36).substr(2, 9);
+        
+        // Sistema de navegación entre páginas
+        function showPage(pageId) {
+            // Oculta todas las páginas
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Muestra la página seleccionada
+            document.getElementById(pageId).classList.add('active');
+            
+            // Desplaza al inicio de la página
+            window.scrollTo(0, 0);
+        }
+        
+        // Configurador de productos
+        function selectProduct(element, productType) {
+            // Remover selección previa
+            const options = document.querySelectorAll('.product-option');
+            options.forEach(opt => opt.classList.remove('selected'));
+            
+            // Seleccionar nuevo
+            element.classList.add('selected');
+        }
+        
+        // Enviar formulario
+        function submitForm() {
+            // Validación básica
+            const selectedProduct = document.querySelector('.product-option.selected');
+            if (!selectedProduct) {
+                alert('Por favor selecciona un tipo de producto');
+                return;
+            }
+            
+            // Recoger datos del formulario
+            const formData = {
+                producto: selectedProduct.querySelector('h4').textContent,
+                cantidad: document.getElementById('cantidad').value,
+                paginas: document.getElementById('paginas').value,
+                lomo: document.getElementById('lomo').value,
+                formato: document.getElementById('formato').value,
+                encuadernacion: document.getElementById('encuadernacion').value,
+                soporteInterior: document.getElementById('soporte-interior').value,
+                colorInterior: document.querySelector('input[name="color-interior"]:checked').value,
+                soporteCubierta: document.getElementById('soporte-cubierta').value,
+                colorCubierta: document.querySelector('input[name="color-cubierta"]:checked').value,
+                impresionCubierta: document.getElementById('impresion-cubierta').value
+            };
+            
+            console.log('Datos del formulario:', formData);
+            alert('Formulario enviado. Ver la consola para los datos recogidos.');
+        }
+        
+        // Chatbot functions
+        function toggleChatbot() {
+            const chatbot = document.getElementById('chatbotContainer');
+            chatbot.classList.toggle('chatbot-active');
+        }
+        
+        function sendChatbotMessage() {
+            const input = document.getElementById('chatbotInput');
+            const message = input.value.trim();
+            if (!message) return;
+            
+            const messagesDiv = document.getElementById('chatbotMessages');
+            
+            // Mostrar mensaje del usuario
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.className = 'message';
+            userMessageDiv.innerHTML = `<div class="user-message">${message}</div>`;
+            messagesDiv.appendChild(userMessageDiv);
+            
+            input.value = '';
+            
+            // Enviar mensaje a Rasa
+            sendMessageToRasa(message);
+            
+            // Auto-scroll al final
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        function handleChatbotKeyPress(e) {
+            if (e.key === 'Enter') {
+                sendChatbotMessage();
+            }
+        }
+        
+        // Función para enviar mensajes a Rasa
+        function sendMessageToRasa(message) {
+    const messagesDiv = document.getElementById('chatbotMessages');
+    if (!messagesDiv) {
+        console.error('Elemento chatbotMessages no encontrado');
+        return;
+    }
+
+    // Mostrar indicador de que el bot está escribiendo
+    const typingIndicator = document.createElement('div');
+    typingIndicator.className = 'message';
+    typingIndicator.innerHTML = `<div class="bot-message">Escribiendo...</div>`;
+    messagesDiv.appendChild(typingIndicator);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    
+    // Configurar la petición a Rasa
+    const requestBody = {
+        sender: 'user_' + Date.now(), // o tu SESSION_ID
+        message: message
+    };
+    
+    fetch(RASA_SERVER_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Eliminar el indicador "Escribiendo..."
+        messagesDiv.removeChild(typingIndicator);
+        
+        // Asegurarnos que data es un array
+        const responses = Array.isArray(data) ? data : [data];
+        
+        // Mostrar las respuestas de Rasa
+        responses.forEach(response => {
+            const botMessageDiv = document.createElement('div');
+            botMessageDiv.className = 'message';
+            
+            // Manejar diferentes tipos de respuestas
+            if (response.text) {
+                // Convertir Markdown a HTML
+                const htmlContent = marked.parse(response.text);
+                botMessageDiv.innerHTML = `<div class="bot-message">${htmlContent}</div>`;
+            } else if (response.image) {
+                botMessageDiv.innerHTML = `<div class="bot-message"><img src="${response.image}" style="max-width:100%;"></div>`;
+            } else if (response.buttons) {
+                let buttonsHTML = response.buttons.map(button => 
+                    `<button style="margin: 5px; padding: 8px 12px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;" 
+                     onclick="sendMessageToRasa('${button.payload || button.title}')">${button.title}</button>`
+                ).join('');
+                // Convertir texto con Markdown si existe
+                const textContent = response.text ? marked.parse(response.text) : '';
+                botMessageDiv.innerHTML = `<div class="bot-message">${textContent}<br>${buttonsHTML}</div>`;
+            }
+            
+            messagesDiv.appendChild(botMessageDiv);
+        });
+        
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    })
+    .catch(error => {
+        console.error('Error al comunicarse con Rasa:', error);
+        messagesDiv.removeChild(typingIndicator);
+        
+        const errorMessageDiv = document.createElement('div');
+        errorMessageDiv.className = 'message';
+        errorMessageDiv.innerHTML = `<div class="bot-message">Lo siento, hubo un error al procesar tu mensaje. Por favor intenta nuevamente.</div>`;
+        messagesDiv.appendChild(errorMessageDiv);
+        
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    });
+}
+
+
+        
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mostrar la página de inicio por defecto
+            showPage('home');
+            
+            // Enviar evento de sesión iniciada a Rasa
+            sendMessageToRasa('/greet');
+        });
+    </script>
+</body>
+</html>

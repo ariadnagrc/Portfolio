@@ -1,0 +1,26 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohOT8lMz2/OL6gKD83PxmoMjEntbi2NhYA2TQiMA==": "utter_codigos_promocionales",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohOT8lMz2/OL6gKD83PxmoMjEntbiWgJmlJSWpRfHYtRJrQywAPxxImA==": "action_listen",
+    "eJwtysEJwCAMQNFVMkAncJVSQtBQBE3ExF7E3Su0t//gn3MdMFvnByl6Vgkwv0ChygF+lGzOst9h3PeTZdMDRBUbxaljZdekho1uXet6Af2PIqk=": "utter_consultar_metodos_pago",
+    "eJyNjUEKgDAMBL/SB/iCfkUkhBqk0CYlTb2U/t2CXkVvOzC7u/axuF6UTsBgUdi7fgdgzOTdAylWI55uq6TTiTzRvAvCtSVDhUwmu1QoeMj4GG1mpPDS/f2xXSwtSgM=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhIDE9P76kKDGvOC21KDUvOTOxtjYWAHPHINk=": "utter_pago_transferencia",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhIDE9P76kKDGvOC21KDUvOTOxloCBpSUlqUXxWPQRZXYsAKnZRJM=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqLO4tKA0tbgkv7Y2FgCZLh49": "utter_presupuesto",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqLO4tKA0tbgkv5aASaUlJalF8cga8JsWCwBufDy/": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqLO4tKA0tbgkv5aASaUlJalF8cgaKDGNeHfFl6cm1dbGAgB/T1ro": "utter_presupuesto_web",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqLO4tKA0tbgkv5aASaUlJalF8cgaKDGNeHfFl6cmkew2sCbCpsYCAK0+fKQ=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhoCg/KSc1N7E4viAxPb+2NhYA83MfOQ==": "utter_problemas_pago",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhoCg/KSc1N7E4viAxPb+WgGGlJSWpRfFoegiaGQsAhV0/sw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhIDE9P74ksSgrtSSxtjYWALT+Hl8=": "utter_pago_tarjeta",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhIDE9P74ksSgrtSSxloBRpSUlqUXxKDoImBcLAAKDPSU=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqLO4tKA0tbgkv5aASaUlJalF8cgaKDGNeHfF5yZm5tTWxgIA2lVbTQ==": "utter_presupuesto_mail",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqLO4tKA0tbgkv5aASaUlJalF8cgaKDGNeHfF5yZm5pDsOIguIsyNBQAlU33T": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhODGnNCW/tjYWAAX6G/Y=": "utter_saludo",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhODGnNCW/loAhpSUlqUXxULU4zYgFAOmENeo=": "utter_faq",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhODGnNCW/loAhpSUlqUXxULUUmZGWWIjbgFgAvtVOjg==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhIDE9P74gsbIgMae2NhYAltAd+w==": "utter_pago_paypal",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhIDE9P74gsbIgMaeWgEmlJSWpRfHIGvCbFgsAS8w7+Q==": "action_listen"
+  }
+}

@@ -1,0 +1,111 @@
+[
+    {
+        "tema_principal": "presupuestos",
+        "subtema": "general",
+        "preguntas": [
+          "Necesito ayuda con un presupuesto",
+          "¿Cómo solicito un presupuesto?",
+          "Quiero un presupuesto detallado",
+          "¿Me podrían enviar un presupuesto?",
+          "¿Me podrían dar un estimado de costos?",
+          "Estoy interesado en un presupuesto"
+        ],
+        "respuesta": "Ofrecemos dos opciones: puedes crear tu propio presupuesto online o solicitar uno personalizado. ¿Qué prefieres?",
+        "etiquetas": ["cotización", "costos", "estimación", "solicitud"],
+        "opciones": [
+          {
+            "texto": "Presupuesto personalizado",
+            "accion": "presupuesto_personalizado"
+          },
+          {
+            "texto": "Hacerlo yo online",
+            "accion": "presupuesto_online"
+          }
+        ]
+      },
+      {
+        "tema_principal": "presupuestos",
+        "subtema": "personalizado",
+        "preguntas": [
+          "Necesito un presupuesto personalizado",
+          "Necesito un presupuesto específico para mi proyecto",
+          "¿Cómo solicito un presupuesto personalizado?",
+          "Me gustaría recibir un presupuesto adaptado a mis necesidades",
+          "Quiero pedir un presupuesto a medida",
+          "¿Pueden hacerme un presupuesto personalizado?"
+        ],
+        "respuesta": "Para presupuestos personalizados, envíe un correo a presupuesto@truyol.com con los detalles de su proyecto. Nuestro equipo le responderá con una cotización en 5-10 minutos durante horario comercial (L-V 9:00-18:00). ¿Necesita ayuda para redactar su solicitud?",
+        "etiquetas": ["a medida", "específico", "correo", "solicitud especial"],
+        "accion_rapida": {
+          "texto": "📧 Abrir cliente de correo",
+          "url": "mailto:presupuesto@truyol.com"
+        }
+      },
+      {
+        "tema_principal": "presupuestos",
+        "subtema": "online",
+        "preguntas": [
+          "Quiero realizar mi propio presupuesto",
+          "¿Puedo hacer un presupuesto desde la página web?",
+          "¿Cómo puedo hacer mi presupuesto online?",
+          "¿Puedo hacer un presupuesto directamente desde la web?",
+          "Necesito crear un presupuesto en la plataforma online",
+          "Quiero hacer un presupuesto usando la herramienta online"
+        ],
+        "respuesta": "Puede crear su presupuesto online en 3 pasos:\n1. Seleccione productos de nuestro catálogo\n2. Configure formato, soporte y acabados\n3. Vea precios según fecha de entrega\n\n¿Quiere que le guíe paso a paso o prefiere intentarlo por su cuenta?",
+        "etiquetas": ["automático", "calculadora", "herramienta", "configurador"],
+        "opciones": [
+          {
+            "texto": "Ver tutorial",
+            "url": "/tutorial-presupuestos"
+          },
+          {
+            "texto": "Ir al configurador",
+            "url": "/presupuesto-online"
+          }
+        ]
+      },
+    {
+        "tema_principal": "proceso de compra",
+        "subtema": "selección de precios",
+        "preguntas": [
+          "¿Cómo selecciono un precio en la solicitud de presupuesto?",
+          "¿Cómo elijo el precio más adecuado para mí?",
+          "¿Puedo seleccionar el precio que quiero de los presupuestos?"
+        ],
+        "respuesta": "Puedes seleccionar cualquiera de los precios mostrados en tu presupuesto y añadirlo a la cesta.",
+        "etiquetas": ["precios", "presupuesto", "selección"]
+      },
+      {
+        "tema_principal": "proceso de compra",
+        "subtema": "gestión de cesta",
+        "preguntas": [
+          "¿Se pueden añadir varios presupuestos a la cesta?",
+          "¿Puedo añadir más productos después de generar un presupuesto?"
+        ],
+        "respuesta": "Cada presupuesto se guarda como un artículo en la cesta, y puedes seguir añadiendo más productos.",
+        "etiquetas": ["cesta", "carrito", "agregar productos"]
+      },
+      {
+        "tema_principal": "proceso de compra",
+        "subtema": "plazos de entrega",
+        "preguntas": [
+          "¿Los productos en la cesta tienen el mismo plazo de entrega?",
+          "¿Cuál es el plazo de entrega para los productos de la cesta?",
+          "¿Los artículos en mi cesta tienen el mismo tiempo de entrega?"
+        ],
+        "respuesta": "Todos los productos incluidos en la cesta tendrán el mismo plazo de entrega.",
+        "etiquetas": ["entrega", "tiempos", "logística", "envío"]
+      },
+      {
+        "tema_principal": "proceso de compra",
+        "subtema": "finalización de compra",
+        "preguntas": [
+          "¿Qué pasa después de completar mi cesta?",
+          "¿Cómo finalizo mi compra después de llenar la cesta?",
+          "¿Qué debo hacer después de agregar los productos a la cesta?"
+        ],
+        "respuesta": "Una vez hayas terminado de completar la cesta, podrás continuar con el proceso de pago y finalización de tu compra.",
+        "etiquetas": ["checkout", "pago", "terminar compra", "proceso final"]
+      }
+]
