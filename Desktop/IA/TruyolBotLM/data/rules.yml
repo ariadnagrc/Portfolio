@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Responder cuando el bot no entiende (Fallback)
+  steps:
+    - intent: nlu_fallback  
+    - action: utter_default_fallback 
