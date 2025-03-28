@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio | [Tu Nombre]</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">TuNombre</a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="projects/">Proyectos</a></li>
+                <li><a href="skills/">Habilidades</a></li>
+                <li><a href="contact/">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sección de inicio -->
+    <header id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hola, soy <span>[Tu Nombre]</span></h1>
+                <h2>[Tu Profesión/Rol]</h2>
+                <p>Bienvenido/a a mi portfolio donde muestro mis proyectos y habilidades.</p>
+                <div class="hero-buttons">
+                    <a href="projects/" class="btn">Ver proyectos</a>
+                    <a href="contact/" class="btn btn-outline">Contactarme</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/foto-perfil.jpg" alt="Foto de perfil">
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección sobre mí -->
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>¡Hola! Soy [Tu Nombre], un/a apasionado/a [tu profesión] con experiencia en [tus áreas de especialización].</p>
+                    <p>Me encanta crear soluciones innovadoras y eficientes para problemas complejos.</p>
+                    <a href="skills/" class="btn">Ver mis habilidades</a>
+                </div>
+                <div class="about-info">
+                    <div class="info-item">
+                        <h3>Nombre:</h3>
+                        <p>[Tu Nombre Completo]</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Email:</h3>
+                        <p>[tuemail@ejemplo.com]</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Ubicación:</h3>
+                        <p>[Tu Ciudad, País]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de proyectos preview -->
+    <section id="proyectos-preview" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <p class="section-subtitle">Algunos de mis trabajos recientes</p>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card" data-project="proyecto1">
+                    <div class="project-image">
+                        <img src="images/proyecto1.jpg" alt="Proyecto 1">
+                        <div class="project-overlay">
+                            <h3>Nombre del Proyecto 1</h3>
+                            <p>Tecnologías: HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Nombre del Proyecto 1</h3>
+                        <p>Breve descripción del proyecto que muestra sus características principales...</p>
+                        <a href="projects/#proyecto1" class="btn btn-small">Ver detalles</a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card" data-project="proyecto2">
+                    <div class="project-image">
+                        <img src="images/proyecto2.jpg" alt="Proyecto 2">
+                        <div class="project-overlay">
+                            <h3>Nombre del Proyecto 2</h3>
+                            <p>Tecnologías: React, Node.js</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Nombre del Proyecto 2</h3>
+                        <p>Breve descripción del proyecto que muestra sus características principales...</p>
+                        <a href="projects/#proyecto2" class="btn btn-small">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="projects/" class="btn">Ver todos los proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de habilidades preview -->
+    <section id="habilidades-preview" class="section">
+        <div class="container">
+            <h2 class="section-title">Mis Habilidades</h2>
+            <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+            
+            <div class="skills-container">
+                <!-- Fila 1 -->
+                <div class="skills-row">
+                    <!-- Java -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_java.png" alt="MongoDB" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Java</span>
+                    </div>
+                    
+                    <!-- Python -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_python.png" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    
+                    <!-- PostgreSQL -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_springboot.png" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="skills-row">
+                    <!-- MongoDB -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_mongoDB.png" alt="MongoDB" class="tech-logo">
+                        </div>
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+                    
+                    <!-- SQL -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_oracleSQL.png" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">SQL</span>
+                    </div>
+                    
+                    <!-- PostgreSQL -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_postgreSQL.png" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <!-- Fila 3 -->
+                <div class="skills-row">
+                    <!-- HTML5 -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_html5.png" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">HTML5</span>
+                    </div>
+                    
+                    <!-- CSS3 -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_css.png" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">CSS3</span>
+                    </div>
+                    
+                    <!-- JavaScript -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_js.png" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <br><a href="skills/" class="btn">Ver todas mis habilidades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>[Tu Nombre]</h3>
+                    <p>Breve descripción sobre ti o tu trabajo.</p>
+                </div>
+            
+                
+                <div class="footer-social">
+                    <h3>Sígueme</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> [Tu Nombre]. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
