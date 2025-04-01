@@ -1,0 +1,96 @@
+/* contact.css actualizado */
+.contact-hero {
+    background: linear-gradient(135deg, #5f54ff 0%, #9b18c4 100%);
+    padding: 50px 0 60px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #e4d4e9; /* Color oscuro para contraste */
+}
+
+.contact-hero h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-hero .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-main {
+    padding-top: 10px;
+    background: #222222;
+}
+
+.contact-content {
+    display: grid;
+    gap: 40px;
+    margin-top: -80px; /* Solapamiento con el hero */
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Resto de tus estilos existentes... */
+.contact-info {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-info-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.11);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ... (mantén el resto de tus estilos como están) ... */
+
+.contact-info-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #7b0e9c;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+@media (min-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos | [Tu Nombre]</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Ariadna García</a>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../aboutMe/">Sobre mí</a></li>
+                <li><a href="index.html" class="active">Proyectos</a></li>
+                <li><a href="../skills/">Habilidades</a></li>
+                <li><a href="../contact/">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="projects-main">
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Mis Proyectos</h1>
+                <p class="section-subtitle">Una colección de mis trabajos recientes</p>
+                
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card" data-category="frontend" id="proyecto1">
+                        <div class="project-image">
+                            <img src="../images/proyecto1.jpg" alt="Proyecto 1">
+                        </div>
+                        <div class="project-info">
+                            <h2>Nombre del Proyecto 1</h2>
+                            <p class="project-description">Descripción detallada del proyecto. Tecnologías utilizadas y problemas resueltos.</p>
+                            <div class="project-details">
+                                <h3>Detalles técnicos</h3>
+                                <ul>
+                                    <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript</li>
+                                    <li><strong>Rol:</strong> Desarrollador Frontend</li>
+                                    <li><strong>Fecha:</strong> Enero 2023</li>
+                                </ul>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">Ver Demo</a>
+                                <a href="#" class="btn btn-outline">Código en GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proyecto 2 -->
+                    <div class="project-card" data-category="fullstack" id="proyecto2">
+                        <!-- Similar estructura al proyecto 1 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Similar al footer del index.html -->
+    </footer>
+
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

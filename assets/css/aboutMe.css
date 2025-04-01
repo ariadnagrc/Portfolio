@@ -1,0 +1,134 @@
+/* Estilos específicos para about.html */
+.hero-about {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 50px 0 60px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-about h1 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.personal-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 40px;
+    max-width: 1000px;
+    margin: -80px auto 60px;
+    position: relative;
+}
+
+.personal-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+.personal-photo {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 300px;
+}
+
+.personal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.personal-info h2 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.personal-bio {
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.detail-card {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 3px solid #4a6cf7;
+}
+
+.detail-card i {
+    color: #4a6cf7;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.detail-card h3 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.journey-section {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #4a6cf7;
+    border: 3px solid white;
+}
+
+@media (max-width: 768px) {
+    .personal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .personal-card {
+        margin-top: -40px;
+        padding: 30px 20px;
+    }
+    
+    .personal-photo {
+        height: 250px;
+        width: 250px;
+        margin: 0 auto;
+    }
+}
