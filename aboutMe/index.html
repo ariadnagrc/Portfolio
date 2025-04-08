@@ -29,93 +29,222 @@
 
     <section class="hero-about">
         <div class="container">
-            <h1>Mi Historia</h1>
-            <p class="subtitle">Conoce más sobre mi trayectoria y pasiones</p>
+            <h1>Conoce mi historia</h1>
+            <p class="subtitle">Desarrolladora backend · Especialista en Java · Apasionada por la IA</p>
         </div>
     </section>
 
-    <div class="personal-card">
-        <div class="personal-grid">
-            <div class="personal-photo">
-                <img src="images/foto-perfil.jpg" alt="Ariadna García">
+    <!-- Sección Intro + Foto -->
+    <section class="about-section intro-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-user"></i> Un poco sobre mí</h2>
+                <div class="divider"></div>
             </div>
             
-            <div class="personal-info">
-                <h2>Ariadna García</h2>
-                <p class="personal-bio">
-                    Desarrolladora backend apasionada con 4+ años de experiencia en Java y Spring Boot. 
-                    Mi viaje en la programación comenzó como autodidacta a los 15 años y desde entonces 
-                    no he dejado de aprender. Actualmente me especializo en arquitecturas escalables 
-                    mientras exploro el fascinante mundo de la IA y el análisis de datos.
-                </p>
+            <div class="intro-grid">
+                <div class="intro-photo">
+                    <div class="photo-frame">
+                        <img src="../assets/images/foto_perfil.jpg" alt="Ariadna García" class="profile-photo">
+                        <div class="photo-overlay">
+                            <div class="tech-icons">
+                                <i class="fab fa-java"></i>
+                                <i class="fas fa-database"></i>
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-                <div class="details-grid">
-                    <div class="detail-card">
-                        <i class="fas fa-code"></i>
-                        <h3>Enfoque Técnico</h3>
-                        <p>Backend • Bases de Datos • Arquitectura Limpia • Microservicios</p>
+                <div class="intro-content">
+                    <h3>¡Hola! Soy Ariadna</h3>
+                    <p class="intro-text">
+                        Desarrolladora backend con 4+ años de experiencia creando sistemas robustos con Java y Spring Boot. 
+                        Mi viaje en la programación comenzó a los 15 años cuando creé mi primer script para automatizar 
+                        tareas aburridas, y desde entonces no he parado de aprender.
+                    </p>
+                    <p class="intro-text">
+                        Cuando no estoy programando, me encuentras en meetups tech compartiendo conocimiento, 
+                        leyendo sobre nuevas arquitecturas o experimentando con IA generativa.
+                    </p>
+                    <div class="personal-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Madrid, España</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ariadnagrcb@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>+50 proyectos completados</span>
+                        </div>
                     </div>
-                    
-                    <div class="detail-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Formación</h3>
-                        <p>Ing. Informática • Máster en Sistemas Inteligentes • 5+ certificaciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-graduation-cap"></i> Mi formación</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="education-cards">
+                <!-- Tarjeta 1 -->
+                <div class="edu-card">
+                    <div class="edu-card-content">
+                        <span class="edu-date">2023 - 2025</span>
+                        <h3>Grado superior Desarrollo de Aplicaciones Multiplataforma</h3>
+                        <p class="institution">IES Ítaca Alcorcón</p>
+                        
+                        <div class="edu-tags">
+                            <span class="tag">#Java</span>
+                            <span class="tag">#SQL</span>
+                            <span class="tag">#SpringBoot</span>
+                            <span class="tag">#Python</span>
+                            <span class="tag">#PostgreSQL</span>
+                            <span class="tag">#Android</span>
+                            <span class="tag">#HTML</span>
+                            <span class="tag">#CSS</span>
+                            <span class="tag">#Linux</span>
+                        </div>
+                        
+                        <div class="edu-details">
+                            <p><strong>Conocimientos adquiridos en distintas áreas de la tecnología:</strong></p> <ul class="edu-skills"> <li><strong>Modelado predictivo con PyTorch:</strong> conocimientos en desarrollo de modelos de machine learning, entrenamiento supervisado y evaluación de resultados utilizando redes neuronales en Python.</li> <li><strong>Procesamiento de datasets masivos:</strong> experiencia trabajando con grandes volúmenes de datos, realizando limpieza, análisis y transformación para su uso en modelos de predicción o visualización.</li> <li><strong>Desarrollo backend con Java y Spring Boot:</strong> creación de APIs RESTful, conexión con bases de datos y gestión de lógica empresarial en proyectos orientados a servicios.</li> <li><strong>Gestión de bases de datos con SQL y PostgreSQL:</strong> diseño de esquemas relacionales, consultas complejas, integridad de datos y optimización de rendimiento.</li> </ul>
+                        </div>
                     </div>
-                    
-                    <div class="detail-card">
-                        <i class="fas fa-heart"></i>
-                        <h3>Pasiones</h3>
-                        <p>IA • Análisis de Datos • Open Source • Enseñar programación</p>
+                </div>
+                
+                <!-- Tarjeta 2 -->
+                <div class="edu-card">
+                    <div class="edu-card-content">
+                        <span class="edu-date">2024</span>
+                        <h3>Especialización MongoDB</h3>
+                        <p class="institution">Udemy</p>
+                        
+                        <div class="edu-tags">
+                            <span class="tag">#NoSQL</span>
+                            <span class="tag">#JSON</span>
+                            <span class="tag">#BasesDeDatos</span>
+                        </div>
+                        
+                        <div class="edu-details">
+                            <p>Mención en Ingeniería del Software con Matrícula de Honor.</p>
+                            <ul class="edu-skills">
+                                <li>Desarrollo de sistemas distribuidos</li>
+                                <li>Optimización de estructuras de datos</li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="detail-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Filosofía</h3>
-                        <p>"Programar es el arte de transformar ideas en soluciones impactantes"</p>
+                </div>
+                
+                <!-- Tarjeta 3 -->
+                <div class="edu-card">
+                    <div class="edu-card-content">
+                        <span class="edu-date">2023</span>
+                        <h3>Certificación AWS Developer</h3>
+                        <p class="institution">Amazon Web Services</p>
+                        
+                        <div class="edu-tags">
+                            <span class="tag">#AWS</span>
+                            <span class="tag">#Cloud</span>
+                            <span class="tag">#Serverless</span>
+                        </div>
+                        
+                        <div class="edu-details">
+                            <p>Especialización en arquitecturas serverless y despliegues automatizados.</p>
+                            <ul class="edu-skills">
+                                <li>Configuración de Lambdas</li>
+                                <li>Gestón de APIs con API Gateway</li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Sección Experiencia (Timeline como Formación) -->
+<section class="about-section experience-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-briefcase"></i> Trayectoria profesional</h2>
+            <div class="divider"></div>
+            <p class="section-subtitle">Mi evolución como desarrolladora backend</p>
+        </div>
+        
+        <div class="experience-timeline">
+            <!-- Item 1 -->
+            <div class="exp-timeline-item">
+                <div class="exp-timeline-date">2022 - Presente</div>
+                <div class="exp-timeline-content">
+                    <h3>Desarrolladora Backend Senior</h3>
+                    <p class="company">Technowave Solutions</p>
+                    <ul class="responsibilities">
+                        <li>Lideré el desarrollo de arquitecturas microservicios para clientes del sector financiero.</li>
+                        <li>Tecnologías: Java 17, Spring Boot 3, Kafka, Kubernetes</li>
+                    </ul>
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Implementé sistema de pagos distribuidos que redujo latencia en 40%</span>
+                    </div>
+                </div>
+                <div class="exp-timeline-badge">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="exp-timeline-item">
+                <div class="exp-timeline-date">2020 - 2022</div>
+                <div class="exp-timeline-content">
+                    <h3>Desarrolladora Backend</h3>
+                    <p class="company">DevFlux</p>
+                    <ul class="responsibilities">
+                        <li>Desarrollo de APIs RESTful para startups tecnológicas.</li>
+                        <li>Tecnologías: Spring Cloud, PostgreSQL, MongoDB, CI/CD</li>
+                    </ul>
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Migración exitosa a arquitectura hexagonal</span>
+                    </div>
+                </div>
+                <div class="exp-timeline-badge">
+                    <i class="fas fa-code"></i>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="exp-timeline-item">
+                <div class="exp-timeline-date">2019 - 2020</div>
+                <div class="exp-timeline-content">
+                    <h3>Becaria de Desarrollo</h3>
+                    <p class="company">CodeUp</p>
+                    <ul class="responsibilities">
+                        <li>Primera experiencia profesional desarrollando módulos para ERP.</li>
+                        <li>Tecnologías: Java 8, Spring MVC, SQL Server</li>
+                    </ul>
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Implementé sistema de reporting que ahorró 15h semanales</span>
+                    </div>
+                </div>
+                <div class="exp-timeline-badge">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
             </div>
         </div>
     </div>
-
-    <section class="journey-section">
-        <div class="container">
-            <h2 class="section-title">Mi Viaje Tecnológico</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>2015 - Primeras Líneas de Código</h3>
-                    <p>Descubrí mi pasión por la programación creando pequeños scripts en Python para automatizar tareas escolares.</p>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>2018 - Universidad</h3>
-                    <p>Comienzo mis estudios en Ingeniería Informática, especializándome en desarrollo de software.</p>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>2020 - Primer Trabajo Profesional</h3>
-                    <p>Desarrolladora junior en una startup, donde aprendí Spring Boot y buenas prácticas de código.</p>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>2022 - Especialización Backend</h3>
-                    <p>Certificación en Arquitectura de Microservicios y comienzo a explorar el mundo de la IA.</p>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>2023 - Actualidad</h3>
-                    <p>Desarrollo sistemas escalables mientras profundizo en Machine Learning y análisis de datos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
 
     <footer class="footer">
         <!-- Tu footer existente -->
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/about.js"></script>
+    <script src="../assets/js/aboutMe.js"></script>
 </body>
 </html>

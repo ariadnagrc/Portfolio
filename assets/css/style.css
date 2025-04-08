@@ -4,6 +4,7 @@ Estilos base y comunes - Modo oscuro
 :root {
     --primary-color: #ffb950;
     --secondary-color: #ffe0b2;
+    --deselect-color: #ffb95054;
     --accent-color-a: #e49827;
     --accent-color-b: #ff0c5c;
     --text-color: #f5f1db;
@@ -400,14 +401,15 @@ Estilos de sección proyectos
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--accent-color-a);
-    position: relative; /* Para elementos hijos posicionados */
-    z-index: 3; /* Encima del contenedor */
+    border: 1px solid var(--deselect-color);
+    position: relative; 
+    z-index: 3; 
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--accent-color-a);
 }
 
 .project-image {
@@ -492,13 +494,13 @@ Estilos de sección habilidades
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     overflow: hidden;
-    border: 1px solid var(--accent-color-a);
+    border: 1px solid var(--deselect-color);
 }
 
 .skill-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    border-color: var(--black);
+    border-color: var(--accent-color-a);
 }
 
 .skill-box::before {

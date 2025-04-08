@@ -1,134 +1,357 @@
-/* Estilos específicos para about.html */
-.hero-about {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 50px 0 60px;
+:root {
+    --primary-color: #ffb950;
+    --secondary-color: #ffe0b2;
+    --deselect-color: #ffb95054;
+    --accent-color-a: #e49827;
+    --accent-color-b: #ff0c5c;
+    --text-color: #f5f1db;
+    --white: #f0f0f0;
+    --black: #141414;
+    --bg-primary-color: #202022;
+    --bg-secondary-color: #34353a;
+    --card-primary-color: #b42727;
+    --card-secondary-color: #1be725;
+    --wave-color: rgba(228, 152, 39, 0.15);
+}
+
+/* Estilos generales secciones */
+.about-section {
+    padding: 80px 0;
+    position: relative;
+    background-color: var(--bg-secondary-color);
+}
+
+.section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-.hero-about h1 {
-    font-size: 40px;
-    margin-bottom: 1rem;
-    font-weight: 700;
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.personal-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    padding: 40px;
-    max-width: 1000px;
-    margin: -80px auto 60px;
+.section-header h2 i {
+    font-size: 1.8rem;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: var(--accent-color-a);
+    margin: 15px auto;
+    border-radius: 3px;
+}
+
+/* Sección Intro */
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.intro-photo {
     position: relative;
 }
 
-.personal-grid {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 40px;
-}
-
-.personal-photo {
-    border-radius: 10px;
+.photo-frame {
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    height: 300px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    position: relative;
 }
 
-.personal-photo img {
+.profile-photo {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
 }
 
-.personal-info h2 {
-    color: #2d3748;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.personal-bio {
-    line-height: 1.8;
-    color: #4a5568;
-    margin-bottom: 30px;
-}
-
-.details-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.detail-card {
-    background: #f8fafc;
-    border-radius: 8px;
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
     padding: 20px;
-    border-left: 3px solid #4a6cf7;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.detail-card i {
-    color: #4a6cf7;
-    font-size: 1.5rem;
+.tech-icons i {
+    color: var(--white);
+    font-size: 1.8rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.tech-icons i:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.intro-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.intro-text {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.personal-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+.detail-item i {
+    font-size: 1.2rem;
+}
+
+/* --- Línea de Tiempo con Camino Orgánico --- */
+/* Contenedor principal */
+.education-cards {
+    display: grid;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tarjetas */
+.edu-card {
+    background: var(--bg-primary-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    overflow: hidden;
+}
+
+.edu-card-content {
+    padding: 25px;
+}
+
+/* Efecto hover */
+.edu-card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+
+/* Contenido expandible */
+.edu-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    padding-top: 0;
+}
+
+.edu-card:hover .edu-details {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 15px;
+}
+
+/* Estilos base */
+.edu-date {
+    background: rgba(228, 152, 39, 0.15);
+    color: var(--accent-color-a);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
     margin-bottom: 10px;
 }
 
-.detail-card h3 {
-    margin: 10px 0;
-    font-size: 1.1rem;
+.edu-card h3 {
+    font-size: 1.3rem;
+    margin: 5px 0;
+    color: var(--text-color);
 }
 
-.journey-section {
-    max-width: 1000px;
-    margin: 0 auto 80px;
+.institution {
+    color: var(--accent-color-b);
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 0.9rem;
 }
 
-.timeline {
+/* Tags */
+.edu-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tag {
+    background: rgba(255, 185, 80, 0.1);
+    color: var(--accent-color-a);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px dashed rgba(228, 152, 39, 0.3);
+}
+
+/* Detalles expandidos */
+.edu-skills {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.edu-skills li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-size: 0.9rem;
     position: relative;
+}
+
+.edu-skills li::before {
+    content: "▹";
+    color: var(--accent-color-a);
+    position: absolute;
+    left: -15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .edu-card:hover {
+        transform: scale(1.02);
+    }
+    
+    .edu-card-content {
+        padding: 20px;
+    }
+}
+
+/* --- Timeline Experiencia (Estilo consistente con Formación) --- */
+.experience-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
     padding-left: 30px;
 }
 
-.timeline::before {
+.experience-timeline::before {
     content: '';
     position: absolute;
-    left: 7px;
+    left: 0;
     top: 0;
     height: 100%;
-    width: 2px;
-    background: #e2e8f0;
+    width: 3px;
+    background: linear-gradient(to bottom, 
+        var(--accent-color-a), 
+        var(--primary-color));
+    border-radius: 3px;
 }
 
-.timeline-item {
+.exp-timeline-item {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding-left: 30px;
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 5px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #4a6cf7;
-    border: 3px solid white;
+.exp-timeline-date {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    background: rgba(228, 152, 39, 0.15);
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-    .personal-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .personal-card {
-        margin-top: -40px;
-        padding: 30px 20px;
-    }
-    
-    .personal-photo {
-        height: 250px;
-        width: 250px;
-        margin: 0 auto;
-    }
+.exp-timeline-content {
+    background: rgba(255, 185, 80, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color-a);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.exp-timeline-item:hover .exp-timeline-content {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.exp-timeline-content h3 {
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.company {
+    font-style: italic;
+    color: var(--accent-color-a);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.responsibilities {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.responsibilities li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.exp-timeline-badge {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--bg-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent-color-b);
+}
+
+.exp-timeline-badge i {
+    color: var(--accent-color-b);
+    font-size: 0.9rem;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 12, 92, 0.05);
+    border-radius: 5px;
+    border-left: 2px solid var(--accent-color-b);
+    font-size: 0.9rem;
+}
+
+.achievement i {
+    color: var(--accent-color-b);
 }
