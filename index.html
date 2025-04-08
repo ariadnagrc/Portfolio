@@ -11,9 +11,9 @@
     <!-- Barra de navegación -->
     <nav id="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Ariadna García</a>
+            <a class="logo">Ariadna García</a>
             <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li id="nav-inicio"><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="aboutMe/">Sobre mí</a></li>
                 <li><a href="projects/">Proyectos</a></li>
                 <li><a href="skills/">Habilidades</a></li>
@@ -33,7 +33,7 @@
     </section>
 
 <!-- Sección sobre mí - Versión limpia -->
-<section id="sobre-mi" class="section">
+<section id="sobre-mi" class="section-degradado">
     <div class="container">
         <h2 class="section-title">Sobre mí</h2>
                 <div class="about-text">
@@ -52,10 +52,6 @@
                         <h3>Ubicación</h3>
                         <p>Madrid, España</p>
                     </div>
-                    <div class="info-item">
-                        <h3>Tecnologías</h3>
-                        <p>Java • Spring • SQL • Docker</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -63,12 +59,12 @@
 </section>
 
 
-
     <!-- Sección de proyectos preview -->
-    <section id="proyectos-preview" class="sectionb">
+    <section id="proyectos-preview" class="section">
+        <div class="constellation-container"></div> 
         <div class="container">
             <h2 class="section-title">Mis proyectos</h2>
-            <p class="section-subtitle">Algunos de mis trabajos recientes</p>
+            <p class="section-subtitle">Estos son algunos de mis proyectos destacados</p>
             
             <div class="projects-grid">
                 <!-- Proyecto 1 -->
@@ -90,14 +86,14 @@
                 <!-- Proyecto 2 -->
                 <div class="project-card" data-project="proyecto2">
                     <div class="project-image">
-                        <img src="images/proyecto2.jpg" alt="Proyecto 2">
+                        <img src="assets/images/icon_DBledus.png" alt="DBledus">
                         <div class="project-overlay">
                             <h3>Nombre del Proyecto 2</h3>
                             <p>Tecnologías: React, Node.js</p>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Nombre del Proyecto 2</h3>
+                        <h3>DBledus</h3>
                         <p>Breve descripción del proyecto que muestra sus características principales...</p>
                         <a href="projects/#proyecto2" class="btn btn-small">Ver detalles</a>
                     </div>
@@ -111,10 +107,11 @@
     </section>
 
     <!-- Sección de habilidades preview -->
-    <section id="habilidades-preview" class="sectionb">
+    <section id="habilidades-preview" class="section">
+        <div class="constellation-container"></div> 
         <div class="container">
             <h2 class="section-title">Mis habilidades</h2>
-            <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+            <p class="section-subtitle">Algunas de las tecnologías y herramientas que mejor domino</p>
             
             <div class="skills-container">
                 <!-- Fila 1 -->
@@ -231,5 +228,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>
