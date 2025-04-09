@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="stars-container"></div>
     <header class="header">
         <nav id="navbar">
             <div class="container">
@@ -27,69 +28,85 @@
         </nav>
     </header>
 
-    <section class="hero-about">
-        <div class="container">
+<!-- Hero Section Simplificado -->
+<section class="hero-about">
+    <div class="container">
+        <div class="hero-content">
             <h1>Conoce mi historia</h1>
             <p class="subtitle">Desarrolladora backend · Especialista en Java · Apasionada por la IA</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Sección Intro + Foto -->
-    <section class="about-section intro-section">
-        <div class="container">
-            <div class="section-header">
-                <h2><i class="fas fa-user"></i> Un poco sobre mí</h2>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="intro-grid">
-                <div class="intro-photo">
-                    <div class="photo-frame">
-                        <img src="../assets/images/foto_perfil.jpg" alt="Ariadna García" class="profile-photo">
-                        <div class="photo-overlay">
-                            <div class="tech-icons">
-                                <i class="fab fa-java"></i>
-                                <i class="fas fa-database"></i>
-                                <i class="fas fa-robot"></i>
-                            </div>
+<!-- Sección "Sobre mí" Mejorada -->
+<div id="dynamic-bg"></div>
+<section class="about-section intro-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-user" style="color: #e49827;"></i>&nbsp;Un poco sobre mí</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="about-me-grid">
+            <!-- Foto (arriba) -->
+            <div class="profile-photo-container">
+                <div class="photo-frame">
+                    <img src="../assets/images/foto_perfil.jpg" alt="Ariadna García" class="profile-photo">
+                    <div class="photo-overlay">
+                        <div class="tech-icons">
+                            <i class="fab fa-java"></i>
+                            <i class="fas fa-database"></i>
+                            <i class="fas fa-robot"></i>
                         </div>
                     </div>
                 </div>
-                
-                <div class="intro-content">
-                    <h3>¡Hola! Soy Ariadna</h3>
-                    <p class="intro-text">
-                        Desarrolladora backend con 4+ años de experiencia creando sistemas robustos con Java y Spring Boot. 
-                        Mi viaje en la programación comenzó a los 15 años cuando creé mi primer script para automatizar 
-                        tareas aburridas, y desde entonces no he parado de aprender.
-                    </p>
-                    <p class="intro-text">
-                        Cuando no estoy programando, me encuentras en meetups tech compartiendo conocimiento, 
-                        leyendo sobre nuevas arquitecturas o experimentando con IA generativa.
-                    </p>
-                    <div class="personal-details">
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Madrid, España</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>ariadnagrcb@gmail.com</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>+50 proyectos completados</span>
-                        </div>
+            </div>
+            
+            <!-- Texto principal (derecha) -->
+            <div class="intro-text-content">
+                <h3 class="intro-text-content">¡Hola! Soy Ariadna</h3>
+                <p class="intro-text">
+                    Mi camino en la <strong><font color="#ff0c5c">programación</font></strong> quizás no sea muy largo aún, pero ha sido bastante intenso y significativo. Siempre solía imaginar cosas como "ojalá alguien creara una aplicación para esto", y esa curiosidad y deseo de crear soluciones fue lo que me motivó a empezar a formarme en este mundo. Recuerdo haber comenzado en el mundo del desarrollo con tan solo 14 años, creando mi primera <strong><font color="#ff0c5c">página web</font></strong> siguiendo tutoriales de YouTube. 
+                </p>
+            </div>
+            
+            <!-- Mini-cards (fila debajo de la foto) -->
+            <div class="personal-info-row">
+                <p class="intro-text">
+                    Con el tiempo, mi ambición por aprender fue creciendo, especialmente al iniciar el <strong><font color="#ff0c5c">grado superior</font></strong>, donde encontré el impulso ideal para seguir formándome. Durante todo el ciclo no dejé de aprender por mi cuenta, explorando nuevas tecnologías y creando <strong><font color="#ff0c5c">scripts</font></strong> que me ayudaban a automatizar tareas, desarrollar aplicaciones y expandir mis conocimientos. 
+                </p>
+                <p class="intro-text">
+                    Poco a poco, también comencé a interesarme por otras áreas relacionadas, como la <strong><font color="#ff0c5c">inteligencia artificial</font></strong>  y el <strong><font color="#ff0c5c">análisis de datos</font></strong>. Este interés nació a partir de un proyecto Erasmus en el que participé activamente desde el inicio. Durante esta experiencia, asumí el rol de instructora, explicando e instruyendo a representantes de distintos países participantes. Además, desarrollé un <strong><font color="#ff0c5c">programa</font></strong> específico para el proyecto que permitía la <strong><font color="#ff0c5c">conversión automática</font></strong> de datos a un formato determinado, lo que optimizó significativamente el tiempo permitiendo avanzar más rápidamente. Esta experiencia no solo reforzó mis conocimientos técnicos, sino que también me ayudó a ganar confianza al compartirlos y aplicarlos en un entorno real.
+                </p>
+                <div class="info-item">
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
+                    <span class="info-text">Madrid, España</span>
+                </div>
+                
+                <div class="info-item">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span class="info-text">ariadnagrcb@gmail.com</span>
+                </div>
+                
+                <div class="info-item">
+                    <div>
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="info-text">Técnico superior</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="about-section education-section">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-graduation-cap"></i> Mi formación</h2>
+                <h2><i class="fas fa-graduation-cap" style="color: #e49827;"></i>&nbsp;Mi formación</h2>
                 <div class="divider"></div>
             </div>
             
@@ -103,18 +120,44 @@
                         
                         <div class="edu-tags">
                             <span class="tag">#Java</span>
+                            <span class="tag">#JavaFX</span>
+                            <span class="tag">#Swing</span>
                             <span class="tag">#SQL</span>
                             <span class="tag">#SpringBoot</span>
+                            <span class="tag">#JPA</span>
                             <span class="tag">#Python</span>
                             <span class="tag">#PostgreSQL</span>
                             <span class="tag">#Android</span>
                             <span class="tag">#HTML</span>
                             <span class="tag">#CSS</span>
+                            <span class="tag">#UI/UX</span>
                             <span class="tag">#Linux</span>
+                            <span class="tag">#Ubuntu</span>
+                            <span class="tag">#XML</span>
+                            <span class="tag">#Maven</span>
+                            <span class="tag">#Bash</span>
+                            <span class="tag">#Git</span>
+                            <span class="tag">#Shell</span>
                         </div>
                         
                         <div class="edu-details">
-                            <p><strong>Conocimientos adquiridos en distintas áreas de la tecnología:</strong></p> <ul class="edu-skills"> <li><strong>Modelado predictivo con PyTorch:</strong> conocimientos en desarrollo de modelos de machine learning, entrenamiento supervisado y evaluación de resultados utilizando redes neuronales en Python.</li> <li><strong>Procesamiento de datasets masivos:</strong> experiencia trabajando con grandes volúmenes de datos, realizando limpieza, análisis y transformación para su uso en modelos de predicción o visualización.</li> <li><strong>Desarrollo backend con Java y Spring Boot:</strong> creación de APIs RESTful, conexión con bases de datos y gestión de lógica empresarial en proyectos orientados a servicios.</li> <li><strong>Gestión de bases de datos con SQL y PostgreSQL:</strong> diseño de esquemas relacionales, consultas complejas, integridad de datos y optimización de rendimiento.</li> </ul>
+                            <p>Formación integral en diversas áreas de la informática, abarcando desarrollo frontend y backend, gestión de bases de datos y administración de sistemas operativos Linux, lo que me ha permitido desarrollar una visión global del proceso de creación y mantenimiento de aplicaciones.</p>
+                            <ul class="edu-skills"><br>
+                                <li><strong><font color="#ffb950">Desarrollo de APIs RESTful</font></strong><br>Diseño e implementación de APIs permitiendo la comunicación entre sistemas de forma eficiente y escalable, utilizando tecnologías como Java y Spring Boot.</li>
+
+                                <li><strong><font color="#ffb950">Integración con bases de datos</font></strong><br>Utilización de JPA y Spring Data para la integración de bases de datos relacionales, con enfoque en la optimización del acceso a datos y el mantenimiento de la integridad de la información.</li>
+
+                                <li><strong><font color="#ffb950">Gestión de bases de datos Oracle</font></strong><br>Creación, diseño y administración de bases de datos Oracle, utilizando SQL para la manipulación y consulta de grandes volúmenes de datos.</li>
+
+                                <li><strong><font color="#ffb950">Desarrollo de interfaces gráficas de usuario (GUI)</font></strong><br>Diseño e implementación de interfaces gráficas de usuario (GUI) utilizando JavaFX y Swing para aplicaciones de escritorio, creando soluciones interactivas y visualmente atractivas que mejoran la usabilidad y accesibilidad.</li>
+
+                                <li><strong><font color="#ffb950">Desarrollo de interfaces de usuario (UI/UX)</font></strong><br>Creación de interfaces de usuario intuitivas y accesibles, aplicando principios de diseño enfocados en la experiencia de usuario (UX) y diseño de interfaz (UI).</li>
+
+                                <li><strong><font color="#ffb950">Automatización de procesos</font></strong><br>Desarrollo de scripts y programas para automatizar tareas repetitivas y procesos manuales, utilizando Java y Python para mejorar la eficiencia y reducir errores humanos.</li>
+
+                                <li><strong><font color="#ffb950">Automatización de informes</font></strong><br>Creación de soluciones para la generación automática de informes y exportación de datos a formatos como CSV o PDF, utilizando Java y librerías como Apache POI y iText.</li>
+                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -129,120 +172,137 @@
                         <div class="edu-tags">
                             <span class="tag">#NoSQL</span>
                             <span class="tag">#JSON</span>
-                            <span class="tag">#BasesDeDatos</span>
+                            <span class="tag">#BSON</span>
+                            <span class="tag">#CRUD</span>
+                            <span class="tag">#Índices</span>
+                            <span class="tag">#Modelado</span>
+                            <span class="tag">#Consultas</span>
+                            <span class="tag">#Optimización</span>
                         </div>
                         
                         <div class="edu-details">
-                            <p>Mención en Ingeniería del Software con Matrícula de Honor.</p>
+                            <p>Curso intensivo online.</p>
                             <ul class="edu-skills">
-                                <li>Desarrollo de sistemas distribuidos</li>
-                                <li>Optimización de estructuras de datos</li>
+                                <li>Dominio de la estructura de base de datos NoSQL y el modelo de documentos BSON.</li>
+                                <li>Actualización de documentos.</li>
+                                <li>Manejo de índices para mejorar el rendimiento.</li>
+                                <li>Realización consultas simples y avanzadas.</li>
+                                <li>Implementación de seguridad.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Tarjeta 3 -->
-                <div class="edu-card">
-                    <div class="edu-card-content">
-                        <span class="edu-date">2023</span>
-                        <h3>Certificación AWS Developer</h3>
-                        <p class="institution">Amazon Web Services</p>
-                        
-                        <div class="edu-tags">
-                            <span class="tag">#AWS</span>
-                            <span class="tag">#Cloud</span>
-                            <span class="tag">#Serverless</span>
-                        </div>
-                        
-                        <div class="edu-details">
-                            <p>Especialización en arquitecturas serverless y despliegues automatizados.</p>
-                            <ul class="edu-skills">
-                                <li>Configuración de Lambdas</li>
-                                <li>Gestón de APIs con API Gateway</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-   <!-- Sección Experiencia (Timeline como Formación) -->
+  <!-- Sección Experiencia Mejorada -->
 <section class="about-section experience-section">
     <div class="container">
         <div class="section-header">
-            <h2><i class="fas fa-briefcase"></i> Trayectoria profesional</h2>
+            <h2><i class="fas fa-briefcase" style="color: #e49827;"></i>&nbsp;Trayectoria profesional</h2>
             <div class="divider"></div>
-            <p class="section-subtitle">Mi evolución como desarrolladora backend</p>
         </div>
         
-        <div class="experience-timeline">
+        <div class="hybrid-timeline">
             <!-- Item 1 -->
-            <div class="exp-timeline-item">
-                <div class="exp-timeline-date">2022 - Presente</div>
-                <div class="exp-timeline-content">
-                    <h3>Desarrolladora Backend Senior</h3>
-                    <p class="company">Technowave Solutions</p>
-                    <ul class="responsibilities">
-                        <li>Lideré el desarrollo de arquitecturas microservicios para clientes del sector financiero.</li>
-                        <li>Tecnologías: Java 17, Spring Boot 3, Kafka, Kubernetes</li>
-                    </ul>
-                    <div class="achievement">
-                        <i class="fas fa-trophy"></i>
-                        <span>Implementé sistema de pagos distribuidos que redujo latencia en 40%</span>
+            <div class="ht-item">
+                <div class="ht-date">2023 - 2025</div>
+                <div class="ht-card">
+                    <div class="ht-card-content">
+                        <h3>Profesora - Proyecto Erasmus de IA y Análisis de Datos</h3>
+                        <p class="company">Erasmus+ BIDUSA (Proyecto Europeo)</p>
+                        
+                        <div class="ht-tags">
+                            <span class="tag">#IA</span>
+                            <span class="tag">#MachineLearning</span>
+                            <span class="tag">#Análisis</span>
+                            <span class="tag">#Estandarización</span>
+                            <span class="tag">#Limpieza</span>
+                            <span class="tag">#Weka</span>
+                        </div>
+                        
+                        <div class="ht-details">
+                            <div class="ht-responsibilities">
+                                <h4>Funciones y logros:</h4>
+                                <ul>
+                                    <li>Impartí clases teóricas y prácticas sobre conceptos clave de IA, algoritmos de machine learning, técnicas de análisis de datos y procesamiento de grandes volúmenes de información, adaptando el contenido a diversos niveles de conocimiento.</li>
+
+                                    <li>Desarrollé un programa específico para el proyecto que facilitaba la conversión automática de datos a formatos determinados, optimizando tiempos de trabajo y permitiendo un avance más ágil en el proyecto.</li>
+
+                                    <li>Adquirí y reforcé mis habilidades de comunicación, tanto técnicas como interpersonales, mientras me enfrentaba a desafíos de enseñanza en un contexto internacional.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="exp-timeline-badge">
+                <div class="ht-badge">
                     <i class="fas fa-rocket"></i>
                 </div>
             </div>
             
-            <!-- Item 2 -->
-            <div class="exp-timeline-item">
-                <div class="exp-timeline-date">2020 - 2022</div>
-                <div class="exp-timeline-content">
-                    <h3>Desarrolladora Backend</h3>
-                    <p class="company">DevFlux</p>
-                    <ul class="responsibilities">
-                        <li>Desarrollo de APIs RESTful para startups tecnológicas.</li>
-                        <li>Tecnologías: Spring Cloud, PostgreSQL, MongoDB, CI/CD</li>
-                    </ul>
-                    <div class="achievement">
-                        <i class="fas fa-trophy"></i>
-                        <span>Migración exitosa a arquitectura hexagonal</span>
+            <!-- Item 2 (Freelance) -->
+            <div class="ht-item">
+                <div class="ht-date">- - -</div>
+                <div class="ht-card">
+                    <div class="ht-card-content">
+                        <h3>Desarrolladora FullStack</h3>
+                        <p class="company">Freelance</p>
+                        
+                        <div class="ht-tags">
+                            <span class="tag">#Java</span>
+                            <span class="tag">#SpringBoot</span>
+                            <span class="tag">#Python</span>
+                            <span class="tag">#HTML</span>
+                            <span class="tag">#CSS</span>
+                            <span class="tag">#JS</span>
+                        </div>
+                        
+                        <div class="ht-details">
+                            <div class="ht-responsibilities">
+                                <h4>Actividades:</h4>
+                                <p>Colaboración y desarrollo de proyectos personales:</p>
+                                <ul>
+                                    <li>Desarrollo de página web e-commerce</li>
+                                    <li>Herramienta de conversión y visualización de datos</li>
+                                    <li>Programa para controlar los decibelios a través del micrófono</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="exp-timeline-badge">
+                <div class="ht-badge">
                     <i class="fas fa-code"></i>
-                </div>
-            </div>
-            
-            <!-- Item 3 -->
-            <div class="exp-timeline-item">
-                <div class="exp-timeline-date">2019 - 2020</div>
-                <div class="exp-timeline-content">
-                    <h3>Becaria de Desarrollo</h3>
-                    <p class="company">CodeUp</p>
-                    <ul class="responsibilities">
-                        <li>Primera experiencia profesional desarrollando módulos para ERP.</li>
-                        <li>Tecnologías: Java 8, Spring MVC, SQL Server</li>
-                    </ul>
-                    <div class="achievement">
-                        <i class="fas fa-trophy"></i>
-                        <span>Implementé sistema de reporting que ahorró 15h semanales</span>
-                    </div>
-                </div>
-                <div class="exp-timeline-badge">
-                    <i class="fas fa-graduation-cap"></i>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-    <footer class="footer">
-        <!-- Tu footer existente -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Ariadna</h3>
+                    <p>Programación | IA | BBDD | Análisis de datos</p>
+                </div>
+            
+                
+                <div class="footer-social">
+                    <h3>Sígueme</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Ariadna García. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="../assets/js/aboutMe.js"></script>

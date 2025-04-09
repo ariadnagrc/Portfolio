@@ -14,6 +14,66 @@
     --wave-color: rgba(228, 152, 39, 0.15);
 }
 
+
+/************************************
+  EFECTO DE ESTRELLAS FIJO (SOBRE MÍ)
+*************************************/
+
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 2;
+    pointer-events: none;
+    animation: pulse 4s infinite;
+}
+
+/* Variaciones de tamaño */
+.star.size-1 { width: 1px; height: 1px; }
+.star.size-2 { width: 2px; height: 2px; }
+.star.size-3 { width: 3px; height: 3px; }
+
+/* Variaciones de color */
+.star.color-white { background-color: #ffffff; }
+.star.color-cream { background-color: #ffe0b2; }
+.star.color-orange { background-color: #ffb950; }
+.star.color-dark-orange { background-color: #e49827; }
+
+/* Animaciones */
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    25% { opacity: 0.8; transform: scale(1.2); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+    75% { opacity: 0.9; transform: scale(1.1); }
+}
+
+/* Asegurar que el contenido está por encima */
+.hero-about,
+.about-section,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
 /* Estilos generales secciones */
 .about-section {
     padding: 80px 0;
@@ -46,87 +106,130 @@
     border-radius: 3px;
 }
 
-/* Sección Intro */
-.intro-grid {
+/* Hero Section Minimalista */
+.hero-about {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--bg-primary-color) 0%, var(--bg-secondary-color) 100%);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-about h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-about .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* --- Estructura Grid --- */
+.about-me-grid {
+    max-width: 800px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 50px;
+    grid-template-areas:
+        "photo text"
+        "details details";
+    grid-template-columns: 200px 1fr;
+    gap: 0 30px; 
     align-items: center;
 }
 
-.intro-photo {
+.profile-photo-container {
+    grid-area: photo;
     position: relative;
 }
 
+.intro-text-content {
+    grid-area: text;
+    overflow: hidden; 
+}
+
+.intro-text-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.personal-info-row {
+    grid-area: details;
+    clear: both; /* Fuerza el salto de línea después del texto flotante */
+    padding-top: 0px;
+}
+
+/* Foto */
 .photo-frame {
-    border-radius: 15px;
+    width: 200px;
+    height: 180px;
+    border-radius: 35%;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    margin-right: 30px;
 }
 
 .profile-photo {
     width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
+    height: 100%;
+    object-fit: cover;
 }
 
-.photo-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    padding: 20px;
+/* Mini-cards en fila */
+.personal-info-row {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.tech-icons i {
-    color: var(--white);
-    font-size: 1.8rem;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.tech-icons i:hover {
-    opacity: 1;
-    transform: translateY(-5px);
-}
-
-.intro-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.intro-text {
-    margin-bottom: 15px;
-    line-height: 1.7;
-    color: var(--text-color);
-}
-
-.personal-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex-wrap: wrap;
     gap: 15px;
-    margin-top: 30px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.detail-item {
+.info-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--primary-color);
+    background: rgba(255, 185, 80, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    margin-top: 20px;
 }
 
-.detail-item i {
-    font-size: 1.2rem;
+.info-item:hover {
+    background: rgba(255, 185, 80, 0.2);
+    transform: translateY(-3px);
 }
 
-/* --- Línea de Tiempo con Camino Orgánico --- */
+/* Resto de estilos (photo-overlay, etc.) se mantienen igual */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-me-grid {
+        grid-template-areas:
+            "photo"
+            "text"
+            "details";
+        grid-template-columns: 1fr;
+    }
+    
+    .photo-frame {
+        float: none;
+        margin: 0 auto 25px;
+        shape-outside: none;
+    }
+}
+
+/* --- Línea de Tiempo Formación --- */
 /* Contenedor principal */
 .education-cards {
     display: grid;
@@ -165,7 +268,7 @@
 }
 
 .edu-card:hover .edu-details {
-    max-height: 300px;
+    max-height: 1000px;
     opacity: 1;
     padding-top: 15px;
 }
@@ -245,113 +348,187 @@
     }
 }
 
-/* --- Timeline Experiencia (Estilo consistente con Formación) --- */
-.experience-timeline {
+
+/* --- Timeline Híbrido --- */
+.hybrid-timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding-left: 30px;
+    padding-left: 100px;
 }
 
-.experience-timeline::before {
+.hybrid-timeline::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50px;
     top: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to bottom, 
-        var(--accent-color-a), 
-        var(--primary-color));
+    background: var(--accent-color-a);
     border-radius: 3px;
 }
 
-.exp-timeline-item {
+.ht-item {
     position: relative;
     margin-bottom: 40px;
-    padding-left: 30px;
 }
 
-.exp-timeline-date {
+.ht-date {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    text-align: center;
     font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 5px;
-    background: rgba(228, 152, 39, 0.15);
-    display: inline-block;
-    padding: 3px 12px;
-    border-radius: 20px;
+    color: var(--bg-primary-color);
     font-size: 0.9rem;
+    background: var(--accent-color-a);
+    padding: 3px 10px;
+    border-radius: 20px;
 }
 
-.exp-timeline-content {
-    background: rgba(255, 185, 80, 0.05);
-    padding: 20px;
-    border-radius: 8px;
+.ht-card {
+    background: var(--bg-primary-color);
+    border-radius: 12px;
+    padding: 25px;
+    margin-left: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     border-left: 3px solid var(--accent-color-a);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    position: relative;
 }
 
-.exp-timeline-item:hover .exp-timeline-content {
-    transform: translateX(5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+.ht-item:hover .ht-card {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.exp-timeline-content h3 {
+.ht-card h3 {
+    color: var(--white);
+    margin-left: 40px;
     margin-bottom: 5px;
-    color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .company {
+    color: var(--accent-color-b);
     font-style: italic;
-    color: var(--accent-color-a);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: block;
+    font-size: 0.9rem;
 }
 
-.responsibilities {
+.ht-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     margin: 15px 0;
+}
+
+.tag {
+    background: rgba(255, 185, 80, 0.1);
+    color: var(--accent-color-a);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px dashed rgba(228, 152, 39, 0.3);
+}
+
+/* Detalles expandibles */
+.ht-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.ht-item:hover .ht-details {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.ht-responsibilities h4 {
+    color: var(--accent-color-a);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.ht-responsibilities ul {
     padding-left: 20px;
 }
 
-.responsibilities li {
+.ht-responsibilities li {
     margin-bottom: 8px;
-    color: var(--text-light);
-    line-height: 1.6;
+    color: var(--text-color);
+    position: relative;
+    font-size: 0.9rem;
 }
 
-.exp-timeline-badge {
+.ht-responsibilities p {
+    margin-bottom: 8px;
+    color: var(--text-color);
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.ht-responsibilities li::before {
+    content: "▹";
+    color: var(--accent-color-a);
     position: absolute;
     left: -15px;
-    top: 0;
-    width: 30px;
-    height: 30px;
+}
+
+/* Badge de timeline */
+.ht-badge { 
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background: var(--bg-primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid var(--accent-color-b);
+    z-index: 2;
+    transition: all 0.4s ease;
 }
 
-.exp-timeline-badge i {
+.ht-item:hover .ht-badge {
+    transform: translateX(10px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.ht-badge i {
     color: var(--accent-color-b);
-    font-size: 0.9rem;
+    margin-top: 1px;
+    margin-right: 1px;
+    font-size: 0.8rem;
 }
 
-.achievement {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    padding: 10px;
-    background: rgba(255, 12, 92, 0.05);
-    border-radius: 5px;
-    border-left: 2px solid var(--accent-color-b);
-    font-size: 0.9rem;
-}
-
-.achievement i {
-    color: var(--accent-color-b);
+/* Responsive */
+@media (max-width: 768px) {
+    .hybrid-timeline {
+        padding-left: 60px;
+    }
+    
+    .hybrid-timeline::before {
+        left: 30px;
+    }
+    
+    .ht-date {
+        left: -60px;
+        width: 50px;
+        font-size: 0.8rem;
+    }
+    
+    .ht-badge {
+        left: 18px;
+    }
+    
+    .ht-card {
+        padding: 20px;
+    }
 }
