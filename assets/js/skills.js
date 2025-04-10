@@ -1,23 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Animación de barras de habilidades
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleccionamos todas las barras de progreso
     const skillLevels = document.querySelectorAll('.skill-level');
-    
-    function animateSkillBars() {
-        skillLevels.forEach(level => {
-            const width = level.getAttribute('data-level');
-            level.style.width = width;
-        });
-    }
-    
-    // Activar animación cuando la sección es visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateSkillBars();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {threshold: 0.1});
-    
-    observer.observe(document.querySelector('.skills-main'));
+
+    // Iteramos sobre cada barra de progreso
+    skillLevels.forEach(function(skillLevel) {
+        const level = skillLevel.getAttribute('data-level'); // Obtenemos el atributo 'data-level'
+        
+        // Si existe el valor 'data-level'
+        if (level) {
+            // Extraemos el porcentaje y lo convertimos a número
+            const percentage = parseInt(level, 10); 
+
+            // Establecemos el ancho de la barra en función del porcentaje
+            skillLevel.style.width = `${percentage}%`; 
+        }
+    });
 });

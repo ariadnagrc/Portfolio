@@ -33,41 +33,247 @@
                 <p>Tecnologías y herramientas que domino</p>
             </div>
             </section>
-                <div class="skills-categories">
-                    <!-- Frontend -->
-                    <div class="skills-category">
-                        <h2><i class="fas fa-laptop-code"></i> Frontend</h2>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <h3>HTML5</h3>
-                                    <span>95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="95%"></div>
-                                </div>
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="bbdd">BBDD</button>
+                <button class="filter-btn" data-filter="devops">Devops</button>
+                <button class="filter-btn" data-filter="ia">IA</button>
+            </div>
+
+            <div class="skills-categories">
+                <!-- Backend -->
+                <div class="skills-category" data-category="backend">
+                    <h2><i class="fas fa-server"></i> Backend</h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" style="width: 35px; height: 35px; vertical-align: middle; margin-right: 8px;">
+                                    Java
+                                </h3>
+                                <span>90%</span>
                             </div>
-                            <!-- Más habilidades frontend -->
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info" data-level="60%">
+                                <h3>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" style="width: 28px; height: 28px;">
+                                    Spring Boot
+                                </h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="35"  height="35">
+                                    Python
+                                </h3>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="70%"></div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Backend -->
-                    <div class="skills-category">
-                        <h2><i class="fas fa-server"></i> Backend</h2>
-                        <div class="skills-list">
-                            <!-- Habilidades backend -->
+                </div>
+            
+                <!-- Frontend -->
+                <div class="skills-category" data-category="frontend">
+                    <h2><i class="fas fa-laptop-code"></i> Frontend</h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="30" height="30">HTML</h3>
+                                <span>100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="30" height="30">
+                                    CSS</h3>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="27" height="27">
+                                    JavaScript</h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- BBDD -->
+                <div class="skills-category" data-category="frontend">
+                    <h2><i class="fa-solid fa-database"></i>Bases de datos</h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle SQL" width="30" height="30">
+                                    Oracle SQL</h3>
+                                <span>100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://www.svgrepo.com/show/373980/plsql.svg" alt="PL/SQL" width="30" height="30">
+                                    PL/SQL</h3>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="30" height="30">
+                                    PostgreSQL</h3>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="30" height="30">
+                                    MongoDB</h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DevOps -->
+                <div class="skills-category" data-category="frontend">
+                    <h2><i class="fa-solid fa-code-branch"></i></i>DevOps</h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Tux.svg" alt="Linux" width="30" height="30">
+                                    Linux</h3>
+                                <span>100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Octicons-mark-github.svg" alt="Git" width="30" height="30">Git</h3>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Docker_logo.svg" alt="Docker" width="30" height="30">
+
+                                    Docker</h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- IA -->
+                <div class="skills-category" data-category="frontend">
+                    <h2><i class="fa-solid fa-brain"></i></i>Inteligencia artificial</h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.brandfetch.io/idsnVw1SoN/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Rasa" />
+                                    Rasa</h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://cdn.brandfetch.io/idGqKHD5xE/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Hugging Face" width="35px"/>Transformers</h3>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Docker_logo.svg" alt="Docker" width="30" height="30">
+
+                                    Docker</h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
 
     </main>
 
+    <!-- Footer -->
     <footer>
-        <!-- Similar al footer del index.html -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Ariadna</h3>
+                    <p>Programación | IA | BBDD | Análisis de datos</p>
+                </div>
+            
+                
+                <div class="footer-social">
+                    <h3>Sígueme</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Ariadna García. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="../js/skills.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/projects.js"></script>
+    <script src="../assets/js/skills.js"></script>
 </body>
 </html>

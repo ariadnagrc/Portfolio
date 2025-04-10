@@ -18,20 +18,19 @@
 /************************************
   EFECTO DE ESTRELLAS FIJO (SOBRE MÍ)
 *************************************/
-
 #stars-container {
-    position: fixed;
+    position: fixed; /* <-- antes era fixed */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* esto lo actualizaremos vía JS para que cubra todo el documento */
     z-index: 2;
     pointer-events: none;
-    overflow: hidden;
+    overflow: visible; /* para que estrellas fuera del viewport también se vean */
 }
 
 .star {
-    position: fixed;
+    position: absolute; /* <-- clave para que no sigan el scroll */
     width: 2px;
     height: 2px;
     background-color: #ffffff;
@@ -65,6 +64,34 @@
     50% { opacity: 0.5; transform: scale(0.8); }
     75% { opacity: 0.9; transform: scale(1.1); }
 }
+
+
+#scroll-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1; /* por encima del fondo, debajo del contenido */
+}
+
+.scroll-particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(12px);
+    mix-blend-mode: screen;
+    background: radial-gradient(circle, #ffffff, transparent);
+    transition: transform 0.1s ease-out;
+}
+
+/* Tamaños variados */
+.scroll-particle.size-1 { width: 40px; height: 40px; }
+.scroll-particle.size-2 { width: 60px; height: 60px; }
+.scroll-particle.size-3 { width: 80px; height: 80px; }
+
+
+
 
 /* Asegurar que el contenido está por encima */
 .hero-about,

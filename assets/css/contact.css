@@ -1,75 +1,145 @@
-/* contact.css actualizado */
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, .subtitle {
+    text-align: center;
+}
+
+/* Sección principal de contacto */
 .contact-main {
-    padding-top: 10px;
-    background: var(--bg-secondary-color);
+    padding-top: 40px; /* Separación con el hero */
+    background-color: var(--bg-secondary-color);
 }
 
 .contact-content {
     display: grid;
-    gap: 40px;
-    margin-top: -80px; /* Solapamiento con el hero */
-    position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
+    grid-template-columns: 1fr 2fr; 
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Resto de tus estilos existentes... */
+/* Contact Info (GitHub, Discord, Email, Ubicación) */
 .contact-info {
-    display: grid;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
 }
 
 .contact-info-item {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.11);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    padding-left: 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+    display: flex;
+    flex-direction: column; /* Establece una columna para el icono y el dato */
+    align-items: center; /* Centra todo dentro del item */
+    justify-content: center; /* Alinea verticalmente */
+    text-align: center; /* Centra el texto */
+    transition: transform 0.3s ease;
 }
 
-/* ... (mantén el resto de tus estilos como están) ... */
+.contact-info-item:hover {
+    transform: translateX(10px);
+}
 
 .contact-info-item i {
     font-size: 2rem;
     color: var(--primary-color);
-    margin-bottom: 15px;
+}
+
+.contact-info-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.contact-info-item p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-info-item p a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.contact-info-item p a:hover {
+    text-decoration: none;
+}
+
+/* Formulario de contacto */
+.contact-form-container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #7b0e9c;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
     font-family: inherit;
 }
 
 .form-group textarea {
-    min-height: 150px;
+    min-height: 120px;
     resize: vertical;
 }
 
-@media (min-width: 768px) {
+.btn {
+    background-color: var(--primary-color);
+    color: var(--bg-secondary-color);
+    padding: 12px;
+    margin: auto;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    margin-bottom: 80px;
+}
+
+.btn:hover {
+    background-color: var(--accent-color-a);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
     .contact-content {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr; /* Columna única en pantallas pequeñas */
     }
-    
-    .contact-info {
-        grid-template-columns: 1fr 1fr;
+
+    .contact-form-container {
+        margin-top: 20px;
+    }
+
+    .contact-info-item {
+        flex-direction: column;
+        align-items: center; /* Centrado en pantallas pequeñas */
+        gap: 10px;
     }
 }
