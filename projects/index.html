@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos | [Tu Nombre]</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
+    <link rel="stylesheet" href="../assets/css/aboutMe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Ariadna García</a>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../aboutMe/">Sobre mí</a></li>
+                <li><a href="index.html" class="active">Proyectos</a></li>
+                <li><a href="../skills/">Habilidades</a></li>
+                <li><a href="../contact/">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="projects-main">
+        <section class="hero-about">
+            <div class="container">
+                <h1>Mis proyectos</h1>
+                <p class="subtitle">Una colección de mis trabajos recientes</p>
+            </div>
+        </section>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+                    <button class="filter-btn" data-filter="ia">IA</button>
+                    <button class="filter-btn" data-filter="analisis">Análisis</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card filterable" data-category="fullstack">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="../assets/images/icon_DBledus.png" alt="Proyecto" />
+                                <a href="https://github.com/ariadnagrc/DBledus" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> Ver en GitHub
+                                </a>
+                            </div>
+                            <div class="project-title-summary">
+                                <h3>DBledus</h3>
+                                <p>Programa diseñado para medir y visualizar el nivel de voz del usuario en tiempo real, proporcionando un indicador claro y fácil de interpretar en una escala de 0 a 100. </p>
+                            </div>
+                        </div>
+                    
+                        <div class="project-details">
+                            <p>Mi proyecto destaca por su originalidad al integrar bibliotecas de audio en un entorno Java para capturar y analizar el nivel de sonido mediante el micrófono del sistema. A pesar de que el tratamiento de audio en Java no es tan habitual como en otros lenguajes más orientados al multimedia, he sabido adaptarme rápidamente a las particularidades de las librerías disponibles, superando desafíos técnicos como la gestión en tiempo real de las entradas del micrófono, la normalización de los datos de audio y la interpretación eficiente de los niveles sonoros. Este enfoque demuestra no solo mi capacidad para trabajar con tecnologías poco convencionales, sino también mi facilidad para aprender y aplicar nuevas bibliotecas según lo requiera el proyecto.</p>
+                        </div>
+                    
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Java Sound API</span>
+                            <span class="tag">AWT</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Proyecto 2 -->
+                    <div class="project-card filterable" data-category="analisis">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="../assets/images/icon_dataAlchemist.png" alt="Proyecto" />
+                                <a href="https://github.com/ariadnagrc/DataAlchemist" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> Ver en GitHub
+                                </a>
+                            </div>
+                            <div class="project-title-summary">
+                                <h3>Data Alchemist</h3>
+                                <p>Herramienta diseñada para el proyecto Eramus+ BIDUSA. Su objetivo fue agilizar el proceso de conversión de datos de un formato a otro, eliminando esa parte manual.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="project-details">
+                            <p>Mi proyecto es una herramienta hecha en Python que convierte automáticamente archivos CSV o Excel a formato ARFF, el cual es muy utilizado en entornos de análisis de datos como Weka. Además de la conversión, el programa incluye una función de previsualización gráfica que permite al usuario visualizar los datos antes de exportarlos, facilitando la comprensión y revisión de la información. Es una solución práctica para quienes trabajan con machine learning y necesitan transformar y revisar datasets de forma rápida y sencilla, todo desde una misma aplicación.</p>
+                        </div>
+                    
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Tkinterdnd2</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">CSV</span>
+                            <span class="tag">ARFF</span>
+                        </div>
+                    </div>
+
+
+                    <!-- Proyecto 3 -->
+                    <!-- <div class="project-card filterable" data-category="fullstack">
+                        <div class="project-header">
+                            <div class="project-image">
+                                <img src="../assets/images/icon_ecommerce.png" alt="Proyecto" />
+                                <a href="#" class="github-btn" target="_blank">
+                                    <i class="fab fa-github"></i> Ver en GitHub
+                                </a>
+                            </div>
+                            <div class="project-title-summary">
+                                <h3>Nombre del Proyecto</h3>
+                                <p>Breve descripción o subtítulo atractivo.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="project-details">
+                            <p>Explicación general del proyecto con más detalle, motivación, enfoque técnico, etc.</p>
+                        </div>
+                    
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                    </div> -->
+                </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Ariadna</h3>
+                    <p>Programación | IA | BBDD | Análisis de datos</p>
+                </div>
+            
+                
+                <div class="footer-social">
+                    <h3>Sígueme</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy;  Actualizado 15/04/2025.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/filters.js"></script>
+</body>
+</html>

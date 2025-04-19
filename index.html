@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav id="navbar">
+        <div class="container">
+            <a class="logo">Ariadna García</a>
+            <ul>
+                <li id="nav-inicio"><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="aboutMe/">Sobre mí</a></li>
+                <li><a href="projects/">Proyectos</a></li>
+                <li><a href="skills/">Habilidades</a></li>
+                <li><a href="contact/">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section con superposición -->
+    <section id="hero" class="hero-section">
+        <div class="hero-image-container">
+            <img src="assets/images/banner_inicio.png" alt="Ariadna García" class="hero-image">
+        </div>
+    </section>
+
+<!-- Sección sobre mí - Versión limpia -->
+<section id="sobre-mi" class="section-degradado">
+    <div class="container">
+        <h2 class="section-title">Sobre mí</h2>
+                <div class="about-text">
+                    <p style="text-align: justify;">
+                        Desarrolladora en constante evolución, con una base sólida adquirida durante el grado superior en <strong><font color="#ff0c5c">Desarrollo de Aplicaciones Multiplataforma</font></strong>  y una fuerte vocación <strong><font color="#ff0c5c">autodidacta</font></strong>. Empecé en el mundo del desarrollo desde joven, motivada por la curiosidad y la necesidad de crear soluciones reales. A lo largo de mi formación he participado activamente en proyectos internacionales como <strong><font color="#ff0c5c">Erasmus+</font></strong> , donde ejercí de instructora y desarrolladora, y actualmente continuo ampliando mis conocimientos mediante proyectos personales centrados en <strong><font color="#ff0c5c">backend</font></strong>  y <strong><font color="#ff0c5c">bases de datos</font></strong>, sin dejar de lado el <strong><font color="#ff0c5c">frontend</font></strong>  y mi creciente interés por la <strong><font color="#ff0c5c">inteligencia artificial</font></strong>.
+                        <em>
+                            <br><br>Esto es solo una pequeña parte de mi historia. Si decides seguir explorando mi portfolio, estaré encantada de mostrarte en detalle quién soy, cómo trabajo y todo lo que puedo aportar.
+                        </em> 
+                    </p>    
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                        <p>ariadnagrcb@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3><i class="fa-solid fa-location-dot"></i> Ubicación</h3>
+                        <p>Madrid, España</p>
+                    </div>
+                    <div class="info-item">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Títulación</h3>
+                        <p>Grado superior DAM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sección de proyectos preview -->
+    <section id="proyectos-preview" class="section">
+        <div class="constellation-container"></div> 
+        <div class="container">
+            <h2 class="section-title">Mis proyectos</h2>
+            <p class="section-subtitle">Estos son algunos de mis proyectos destacados</p>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card" data-project="proyecto1">
+                    <div class="project-image">
+                        <img src="assets/images/icon_dataAlchemist.png" alt="Proyecto 1">
+                        <div class="project-overlay">
+                            <h3>Data Alchemist</h3>
+                            <p>Tecnologías: Python, Pandas, Matplotlib</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Data Alchemist</h3>
+                        <p>Programa de conversión de datos para el proyecto ERASMUS+. <br> Hecho en Python.</p>
+                        <a href="projects/#proyecto1" class="btn btn-small">Ver detalles</a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card" data-project="proyecto2">
+                    <div class="project-image">
+                        <img src="assets/images/icon_DBledus.png" alt="DBledus">
+                        <div class="project-overlay">
+                            <h3>DBledus</h3>
+                            <p>Tecnologías: Java, Sound API</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>DBledus</h3>
+                        <p>Programa diseñado para medir y visualizar el nivel de voz del usuario en tiempo real.</p>
+                        <a href="projects/#proyecto2" class="btn btn-small">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <br><a href="projects/" class="btn">Ver todos los proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de habilidades preview -->
+    <section id="habilidades-preview" class="section">
+        <div class="constellation-container"></div> 
+        <div class="container">
+            <h2 class="section-title">Mis habilidades</h2>
+            <p class="section-subtitle">Algunas de las tecnologías y herramientas que mejor domino</p>
+            
+            <div class="skills-container">
+                <!-- Fila 1 -->
+                <div class="skills-row">
+                    <!-- Java -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_java.svg" alt="Java" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Java</span>
+                    </div>
+
+                    <!-- Spring Boot -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_springboot.svg" alt="Spring Boot" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Spring Boot</span>
+                    </div>
+                    
+                    <!-- Python -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_python.svg" alt="Python" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Python</span>
+                    </div>
+
+                    <!-- Android -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_android.svg" alt="Android" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Android</span>
+                    </div>       
+                    
+                    <!-- Linux -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_linux.svg" alt="Linux" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Linux</span>
+                    </div>  
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="skills-row">
+                    <!-- SQL -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_oracle.svg" alt="SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">SQL</span>
+                    </div>
+
+                    <!-- PL/SQL -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_plsql.svg" alt="PL/SQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">PL/SQL</span>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_mongodb.svg" alt="MongoDB" class="tech-logo">
+                        </div>
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+                    
+                    <!-- PostgreSQL -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_postgresql.svg" alt="PostgreSQL" class="tech-logo">
+                        </div>
+                        <span class="skill-name">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <!-- Fila 3 -->
+                <div class="skills-row">
+                    <!-- HTML5 -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_html.svg" alt="HTML" class="tech-logo">
+                        </div>
+                        <span class="skill-name">HTML5</span>
+                    </div>
+                    
+                    <!-- CSS3 -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_css.svg" alt="CSS" class="tech-logo">
+                        </div>
+                        <span class="skill-name">CSS3</span>
+                    </div>
+                    
+                    <!-- JavaScript -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_js.svg" alt="JavaScript" class="tech-logo">
+                        </div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+
+                    <!-- SQL -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_nodejs.svg" alt="Node.js" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Node</span>
+                    </div>
+
+                    <!-- Eclipse -->
+                    <div class="skill-box">
+                        <div class="skill-icon">
+                            <img src="assets/images/icon_docker.svg" alt="Docker" class="tech-logo">
+                        </div>
+                        <span class="skill-name">Docker</span>
+                    </div>  
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <br><a href="skills/" class="btn">Ver todas mis habilidades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Ariadna</h3>
+                    <p>Programación | IA | BBDD | Análisis de datos</p>
+                </div>
+            
+                
+                <div class="footer-social">
+                    <h3>Sígueme</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</body>
+</html>

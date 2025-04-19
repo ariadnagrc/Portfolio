@@ -1,0 +1,578 @@
+/* ======================
+   ANIMACIONES Y EFECTOS
+   ====================== */
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    25% { opacity: 0.8; transform: scale(1.2); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+    75% { opacity: 0.9; transform: scale(1.1); }
+}
+
+/* ======================
+   COMPONENTES REUTILIZABLES
+   ====================== */
+/* Estrellas de fondo */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 2;
+    pointer-events: none;
+    animation: pulse 4s infinite;
+}
+
+.star.size-1 { width: 1px; height: 1px; }
+.star.size-2 { width: 2px; height: 2px; }
+.star.size-3 { width: 3px; height: 3px; }
+
+.star.color-white { background-color: #ffffff; }
+.star.color-cream { background-color: #ffe0b2; }
+.star.color-orange { background-color: #ffb950; }
+.star.color-dark-orange { background-color: #e49827; }
+
+/* Partículas de scroll */
+#scroll-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.scroll-particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(12px);
+    mix-blend-mode: screen;
+    background: radial-gradient(circle, #ffffff, transparent);
+    transition: transform 0.1s ease-out;
+}
+
+.scroll-particle.size-1 { width: 40px; height: 40px; }
+.scroll-particle.size-2 { width: 60px; height: 60px; }
+.scroll-particle.size-3 { width: 80px; height: 80px; }
+
+/* Componentes comunes */
+.divider {
+    width: 80px;
+    height: 3px;
+    background: var(--accent-color-a);
+    margin: 15px auto;
+    border-radius: 3px;
+}
+
+.tag {
+    background: rgba(255, 185, 80, 0.1);
+    color: var(--accent-color-a);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px dashed rgba(228, 152, 39, 0.3);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 185, 80, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    margin-top: 20px;
+}
+
+.info-item:hover {
+    background: rgba(255, 185, 80, 0.2);
+    transform: translateY(-3px);
+}
+
+/* ======================
+   ESTRUCTURA GENERAL
+   ====================== */
+/* Asegurar que el contenido está por encima */
+.hero-about,
+.about-section,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos generales secciones */
+.about-section {
+    padding: 80px 0;
+    position: relative;
+    background-color: var(--bg-secondary-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header h2 i {
+    font-size: 1.8rem;
+}
+
+/* ======================
+   SECCIÓN HERO
+   ====================== */
+.hero-about {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--bg-primary-color) 0%, var(--bg-secondary-color) 100%);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-about h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-about .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ======================
+   SECCIÓN ABOUT ME
+   ====================== */
+.about-me-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "photo text"
+        "details details";
+    grid-template-columns: 200px 1fr;
+    gap: 0 30px;
+    align-items: center;
+}
+
+.profile-photo-container {
+    grid-area: photo;
+    position: relative;
+}
+
+.intro-text-content {
+    grid-area: text;
+    overflow: hidden;
+}
+
+.intro-text-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.photo-frame {
+    width: 200px;
+    height: 180px;
+    border-radius: 35%;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    margin-right: 30px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.personal-info-row {
+    grid-area: details;
+    clear: both;
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ======================
+   SECCIÓN EDUCACIÓN
+   ====================== */
+.education-cards {
+    display: grid;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.edu-card {
+    background: var(--bg-primary-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    overflow: hidden;
+}
+
+.edu-card-content {
+    padding: 25px;
+}
+
+.edu-card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+
+.edu-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    padding-top: 0;
+}
+
+.edu-card:hover .edu-details {
+    max-height: 1000px;
+    opacity: 1;
+    padding-top: 15px;
+}
+
+.edu-date {
+    background: rgba(228, 152, 39, 0.15);
+    color: var(--accent-color-a);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.edu-card h3 {
+    font-size: 1.3rem;
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.institution {
+    color: var(--accent-color-b);
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.edu-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.edu-skills {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.edu-skills li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.edu-skills li::before {
+    content: "▹";
+    color: var(--accent-color-a);
+    position: absolute;
+    left: -15px;
+}
+
+/* ======================
+   SECCIÓN IDIOMAS
+   ====================== */
+.language-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primary-color);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    width: 100%;
+    max-width: 440px;
+}
+
+.flag-trapezoid {
+    width: 80px;
+    height: 100px;
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.flag-trapezoid.spain {
+    background-image: url('https://flagcdn.com/es.svg');
+}
+
+.flag-trapezoid.uk {
+    background-image: url('https://flagcdn.com/gb.svg');
+}
+
+.language-info {
+    padding: 15px 20px;
+    flex-grow: 1;
+}
+
+.language-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.language-info p {
+    margin: 5px 0 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* ======================
+   TIMELINE EXPERIENCIA
+   ====================== */
+.hybrid-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+.hybrid-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--accent-color-a);
+    border-radius: 3px;
+}
+
+.ht-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.ht-date {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--bg-primary-color);
+    font-size: 0.9rem;
+    background: var(--accent-color-a);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.ht-card {
+    background: var(--bg-primary-color);
+    border-radius: 12px;
+    padding: 25px;
+    margin-left: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-left: 3px solid var(--accent-color-a);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.ht-item:hover .ht-card {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.ht-card h3 {
+    color: var(--white);
+    margin-left: 40px;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.company {
+    color: var(--accent-color-b);
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.ht-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.ht-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.ht-item:hover .ht-details {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.ht-responsibilities h4 {
+    color: var(--accent-color-a);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.ht-responsibilities ul {
+    padding-left: 20px;
+}
+
+.ht-responsibilities li {
+    margin-bottom: 8px;
+    color: var(--text-color);
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.ht-responsibilities p {
+    margin-bottom: 8px;
+    color: var(--text-color);
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.ht-responsibilities li::before {
+    content: "▹";
+    color: var(--accent-color-a);
+    position: absolute;
+    left: -15px;
+}
+
+.ht-badge {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--bg-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent-color-b);
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+.ht-item:hover .ht-badge {
+    transform: translateX(10px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.ht-badge i {
+    color: var(--accent-color-b);
+    margin-top: 1px;
+    margin-right: 1px;
+    font-size: 0.8rem;
+}
+
+/* ======================
+   MEDIA QUERIES
+   ====================== */
+@media (max-width: 768px) {
+    .about-me-grid {
+        grid-template-areas:
+            "photo"
+            "text"
+            "details";
+        grid-template-columns: 1fr;
+    }
+    
+    .photo-frame {
+        float: none;
+        margin: 0 auto 25px;
+        shape-outside: none;
+    }
+    
+    .edu-card:hover {
+        transform: scale(1.02);
+    }
+    
+    .edu-card-content {
+        padding: 20px;
+    }
+    
+    .hybrid-timeline {
+        padding-left: 60px;
+    }
+    
+    .hybrid-timeline::before {
+        left: 30px;
+    }
+    
+    .ht-date {
+        left: -60px;
+        width: 50px;
+        font-size: 0.8rem;
+    }
+    
+    .ht-badge {
+        left: 18px;
+    }
+    
+    .ht-card {
+        padding: 20px;
+    }
+}

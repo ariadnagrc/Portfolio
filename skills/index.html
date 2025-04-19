@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis habilidades</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/skills.css">
+    <link rel="stylesheet" href="../assets/css/aboutMe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Ariadna García</a>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../aboutMe/">Sobre mí</a></li>
+                <li><a href="../projects/">Proyectos</a></li>
+                <li><a href="index.html" class="active">Habilidades</a></li>
+                <li><a href="../contact/">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="skills-main">
+        <section class="hero-about">
+            <div class="container">
+                <h1>Mis habilidades</h1>
+                <p class="subtitle">Tecnologías y herramientas que domino. Pulsa sobre una habilidad para expandir los detalles</p>
+            </div>
+            </section>
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="bbdd">BBDD</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
+                <button class="filter-btn" data-filter="ia">IA</button>
+                <button class="filter-btn" data-filter="analisis">Análisis de datos</button>
+            </div>
+
+            <div class="skills-categories">
+                <!-- Backend -->
+                <div class="skills-category filterable" data-category="backend">
+                    <h2><i class="fas fa-server"></i> Backend</h2>
+                    <div class="skills-list">
+                        <!-- Java -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                              <div class="skill-info">
+                                <h3>
+                                  <img src="../assets/images/icon_java.svg" alt="Java" width="35" height="35">
+                                  Java
+                                </h3>
+                                <span>
+                                  90%
+                                  <div class="skill-percentage-indicator"></div>
+                                </span>
+                              </div>
+                              <div class="skill-bar">
+                                <div class="skill-level" data-level="90%"></div>
+                              </div>
+                            </div>
+                            <div class="skill-details">
+                              <ul>
+                                <li>Desarrollo backend con <strong><font color="#e49827">Java 17</font></strong>+.</li>
+                                <li>Acceso a bases de datos mediante <strong><font color="#e49827">JDBC</font></strong>.</li>
+                                <li>Gestión de entidades y operaciones CRUD con <strong><font color="#e49827">JPA</font></strong> y <strong><font color="#e49827">Spring Data</font></strong>.</li>
+                                <li>Configuración de proyectos <strong><font color="#e49827">Maven</font></strong>.</li>
+                                <li>Diseño de interfaces gráficas.</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                        <!-- Spring Boot -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                              <div class="skill-info">
+                                <h3>
+                                  <img src="../assets/images/icon_springboot.svg" alt="Spring Boot" width="35" height="35">
+                                  Spring Boot
+                                </h3>
+                                <span>60%</span>
+                              </div>
+                              <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                              </div>
+                            </div>
+                            <div class="skill-details">
+                              <ul>
+                                <li>Organización por capas: controlador, servicio y repositorio.</li>
+                                <li>Modelado de <strong><font color="#e49827">entidades</font></strong> JPA con <strong><font color="#e49827">relaciones bidireccionales</font></strong>.</li>
+                                <li>Repositorios con JpaRepository y <strong><font color="#e49827">consultas automáticas</font></strong>.</li>
+                                <li>Uso de @Query para <strong><font color="#e49827">consultas personalizadas</font></strong>.</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                        <!-- Python -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3>
+                                        <img src="../assets/images/icon_python.svg" alt="Python" width="35"  height="35">
+                                        Python
+                                    </h3>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="70%"></div>
+                                </div>
+                                <div class="skill-details">
+                                    <ul>
+                                      <li>Capacidad de adaptación rápida a nuevas librerías y entornos.</li>
+                                      <li>Desarrollo de <strong><font color="#e49827">scripts</font></strong> para automatizar tareas repetitivas y procesos manuales.</li>
+                                      <li>Web scraping básico con <strong><font color="#e49827">BeautifulSoup</font></strong>.</li>
+                                      <li>Lectura, transformación y análisis de datos con <strong><font color="#e49827">pandas</font></strong> y <strong><font color="#e49827">numpy</font></strong>.</li>
+                                      <li>Automatización de reportes y <strong><font color="#e49827">extracción de datos</font></strong>  desde archivos Excel/CSV.</li>
+                                    </ul>
+                                  </div>
+                            </div>
+                        </div>
+
+                        <!-- Android -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3>
+                                        <img src="../assets/images/icon_android.svg" alt="Android" width="35"  height="35">
+                                        Android
+                                    </h3>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Manejo de múltiples tipos de ítems y layouts en <strong><font color="#e49827">RecyclerView</font></strong>.</li>
+                                  <li>Gestión de comunicación entre <strong><font color="#e49827">Fragments</font></strong> y <strong><font color="#e49827">Activities</font></strong> mediante interfaces y ViewModels compartidos.</li>
+                                  <li>Desarrollo de interfaces responsivas con <strong><font color="#e49827">ConstraintLayout</font></strong></li>
+                                  <li>Generación y uso de logs personalizados para <strong><font color="#e49827">depuración</font></strong> y monitoreo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Frontend -->
+                <div class="skills-category filterable" data-category="frontend">
+                    <h2><i class="fas fa-laptop-code"></i> Frontend</h2>
+                    <div class="skills-list">
+
+                        <!-- HTML -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_html.svg" alt="HTML5" width="37" height="37">HTML</h3>
+                                    <span>100%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="100%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                    <li>Desarrollo de estructuras claras y organizadas para facilitar el <strong><font color="#e49827">mantenimiento</font></strong> del código.</li>
+                                    <li>Integración de <strong><font color="#e49827">recursos multimedia</font></strong> como vídeos, audios e iframes en proyectos web.</li>
+                                    <li>Creación de <strong><font color="#e49827">tablas</font></strong> accesibles y <strong><font color="#e49827">listas</font></strong> ordenadas/desordenadas para contenidos jerárquicos.</li>
+                                    <li>Integración de íconos, tipografías y <strong><font color="#e49827">librerías externas</font></strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_css.svg" alt="CSS3" width="37" height="37">
+                                        CSS</h3>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Maquetación de <strong><font color="#e49827">interfaces modernas</font></strong> y responsivas.</li>
+                                  <li>Personalización de formularios, botones e inputs con <strong><font color="#e49827">transiciones</font></strong> suaves y estilos propios.</li>
+                                  <li>Implementación de <strong><font color="#e49827">animaciones</font></strong> con @keyframes, transiciones y efectos visuales.</li>
+                                  <li>Uso de <strong><font color="#e49827">variables CSS</font></strong> para facilitar el mantenimiento y reutilización de estilos.</li>
+                                  <li>Creación de diseños visualmente atractivos sin depender de frameworks externos.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_js.svg" alt="JavaScript" width="35" height="35">
+                                        JavaScript</h3>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Uso de <strong><font color="#e49827">eventos</font></strong> (click, input, submit, etc.) y control del flujo de interacción en la interfaz.</li>
+                                  <li>Implementación de <strong><font color="#e49827">funciones reutilizables</font></strong>, callbacks y manejo de eventos personalizados.</li>
+                                  <li>Uso de funciones de array (map(), filter(), reduce()) para <strong><font color="#e49827">tratamiento de colecciones</font></strong>.</li>
+                                  <li>Desarrollo de <strong><font color="#e49827">lógica interactiva</font></strong> para sliders, menús, pestañas, filtros...</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Node.js -->
+                        <!-- <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_nodejs.svg" alt="Node" width="35" height="35">
+                                        Node.js</h3>
+                                    <span>50%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Manejo de múltiples tipos de ítems y layouts en <strong><font color="#e49827">RecyclerView</font></strong>.</li>
+                                  <li>Gestión de comunicación entre <strong><font color="#e49827">Fragments</font></strong> y <strong><font color="#e49827">Activities</font></strong> mediante interfaces y ViewModels compartidos.</li>
+                                  <li>Desarrollo de interfaces responsivas con <strong><font color="#e49827">ConstraintLayout</font></strong></li>
+                                  <li>Generación y uso de logs personalizados para <strong><font color="#e49827">depuración</font></strong> y monitoreo</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            
+                <!-- BBDD -->
+                <div class="skills-category filterable" data-category="bbdd">
+                    <h2><i class="fa-solid fa-database"></i>Bases de datos</h2>
+                    <div class="skills-list">
+
+                        <!-- Oracle SQL -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_oracle.svg" alt="Oracle SQL" width="35" height="35">
+                                        Oracle SQL</h3>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li><strong><font color="#e49827">Creación</font></strong> y <strong><font color="#e49827">optimización</font></strong> de consultas SQL complejas con múltiples JOIN, subconsultas y funciones agregadas.</li>
+                                  <li>Manejo de <strong><font color="#e49827">estructuras</font></strong> de datos: tablas, vistas, índices, secuencias y sinónimos.</li>
+                                  <li>Diseño de <strong><font color="#e49827">esquemas</font></strong> de base de datos y <strong><font color="#e49827">modelado relacional</font></strong> en entornos Oracle.</li>
+                                  <li>Configuración de <strong><font color="#e49827">constraints</font></strong> (CHECK, UNIQUE, FOREIGN KEY, NOT NULL).</li>
+                                  <li>Gestión de <strong><font color="#e49827">transacciones</font></strong> con COMMIT y ROLLBACK.</li>
+                                  <li>Gestión de <strong><font color="#e49827">privilegios</font></strong>, <strong><font color="#e49827">roles</font></strong> y control de acceso a nivel de usuario.</li>
+                                  <li>Dominio de sentencias <strong><font color="#e49827">DDL</font></strong> (CREATE, ALTER, DROP) y <strong><font color="#e49827">DML</font></strong> (INSERT, UPDATE, DELETE, MERGE).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- PL/SQL -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_plsql.svg" alt="PL/SQL" width="35" height="35">
+                                        PL/SQL</h3>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Desarrollo de <strong><font color="#e49827">lógica compleja</font></strong> en base de datos mediante PL/SQL, incluyendo procedimientos, funciones, triggers y paquetes.</li>
+                                  <li><strong><font color="#e49827">Optimización de procesos</font></strong> con cursores y bloques PL/SQL para <strong><font color="#e49827">manipulación masiva de datos</font></strong>.</li>
+                                  <li>Declaración y uso de tipos de <strong><font color="#e49827">datos personalizados</font></strong> (RECORD, TABLE, %ROWTYPE...).</li>
+                                  <li><strong><font color="#e49827">Manejo avanzado de errores</font></strong> con bloques EXCEPTION personalizados.</li>
+                                  <li><strong><font color="#e49827">Control de flujo</font></strong> y <strong><font color="#e49827">lógica condicional</font></strong> mediante estructuras IF, CASE, LOOP, FOR, WHILE.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- PostgreSQL -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_postgresql.svg" alt="PostgreSQL" width="35" height="35">
+                                        PostgreSQL</h3>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li><strong><font color="#e49827">Diseño</font></strong> y <strong><font color="#e49827">administración</font></strong> de bases de datos relacionales.</li>
+                                  <li>Escritura de <strong><font color="#e49827">consultas </font></strong>SQL complejas utilizando JOIN, GROUP BY, <strong><font color="#e49827">subconsultas</font></strong> y <strong><font color="#e49827">funciones agregadas</font></strong>.</li>
+                                  <li>Creación de funciones y <strong><font color="#e49827">procedimientos almacenados</font></strong> usando PL/pgSQL.</li>
+                                  <li>Uso de herramientas gráficas como <strong><font color="#e49827">pgAdmin</font></strong>.</li>
+                                  <li><strong><font color="#e49827">Integración</font></strong> con aplicaciones externas a través de conectores JDBC.</li>
+                                  <li>Configuración de <strong><font color="#e49827">constraints</font></strong> (CHECK, UNIQUE, FOREIGN KEY, NOT NULL) para garantizar consistencia.</li>
+                                  <li>Manejo de triggers y reglas para <strong><font color="#e49827">automatizar procesos</font></strong> y mantener la integridad de los datos.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- MongoDB -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_mongodb.svg" alt="MongoDB" width="35" height="35">
+                                        MongoDB</h3>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li><strong><font color="#e49827">Modelado</font></strong> de datos NoSQL y <strong><font color="#e49827">desarrollo</font></strong> de bases de datos documentales.</li>
+                                  <li>Creación, consulta y manipulación de colecciones mediante operaciones <strong><font color="#e49827">CRUD</font></strong>.</li>
+                                  <li>Consultas avanzadas con <strong><font color="#e49827">filtros</font></strong>, <strong><font color="#e49827">operadores lógicos</font></strong> ($and, $or, $in), y <strong><font color="#e49827">expresiones regulares</font></strong>.</li>
+                                  <li>Uso de <strong><font color="#e49827">colecciones temporales</font></strong>, TTL y operadores de fecha ($date, $gt, $lt).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DevOps -->
+                <div class="skills-category filterable" data-category="devops">
+                    <h2><i class="fa-solid fa-code-branch"></i></i>DevOps</h2>
+                    <div class="skills-list">
+                        
+                        <!-- Linux -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_linux.svg" alt="Linux" width="33" height="33">
+                                        Linux</h3>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Navegación y gestión de archivos en la terminal.</li>
+                                  <li>Uso de comandos de búsqueda y filtrado.</li>
+                                  <li>Visualización de contenido de archivos.</li>
+                                  <li>Creación y edición de archivos de texto usando editores de terminal.</li>
+                                  <li>Instalación de paquetes y software mediante gestores de paquetes.</li>
+                                  <li>Configuración de cron jobs básicos para tareas programadas con crontab.</li>
+                                  <li>Uso de permisos básicos de superusuario (sudo) y ejecución de tareas administrativas simples.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Git -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_git.svg" alt="Git" width="35" height="35">Git</h3>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Uso de Git para control de versiones en proyectos individuales y colaborativos.</li>
+                                  <li>Manejo de ramas (branch).</li>
+                                  <li>Resolución de conflictos de fusión y sincronización con ramas remotas (pull, push, fetch).</li>
+                                  <li>Creación de commits atómicos con mensajes descriptivos y buenas prácticas.</li>
+                                  <li>Clonación y mantenimiento de repositorios externos para integración en entornos locales.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Ubuntu -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_ubuntu.svg" alt="Ubuntu" width="33" height="33" style="margin-top: 2px; margin-bottom: 1px;">
+                                        Ubuntu</h3>
+                                    <span>50%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li><em><font color="#ffe0b2">+ Habilidades mecionadas en 'Linux'.</font></em></li>
+                                  <li>Uso de Ubuntu en equipos físicos y entornos virtualizados como sistema de desarrollo o práctica.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_github.svg" alt="GitHub" width="30" height="30" style="margin-bottom: 5px;">GitHub</h3>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li>Gestión de proyectos y control de versiones en la nube.</li>
+                                  <li>Documentación de proyectos con archivos README.md.</li>
+                                  <li>Administración de ramas remotas y estrategias de integración.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Fedora -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_fedora.svg" alt="Fedora" width="35" height="35">Fedora</h3>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                  <li><em><font color="#ffe0b2">+ Habilidades mecionadas en 'Linux'.</font></em></li>
+                                  <li>Uso fluido de Fedora para tareas técnicas básicas a través de terminal y entorno gráfico.</li>
+                                  <li>Instalación y configuración de entornos gráficos, herramientas de desarrollo y paquetes adicionales en Fedora.</li>
+                                  <li>Instalación y eliminación de programas mediante dnf y rpm en sistemas Fedora.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Docker -->
+                        <div class="skill-item">
+                            <div class="skill-main-content">
+                                <div class="skill-info">
+                                    <h3><img src="../assets/images/icon_docker.svg" alt="Docker" width="35" height="35">
+                                        Docker</h3>
+                                    <span>50%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" data-level="50%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA -->
+                <div class="skills-category filterable" data-category="ia">
+                    <h2><i class="fa-solid fa-brain"></i>Inteligencia artificial</h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_rasa.svg" alt="Rasa" width="60" style="margin-bottom: 5px; margin-top: 5PX;"/>
+                                    Rasa</h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_huggingface.svg" alt="Hugging Face" width="40"/>Transformers</h3>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_tensorflow.svg" alt="TensorFlow" width="30" height="30">
+                                    TensorFlow</h3>
+                                <span>30%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_keras.svg" alt="Keras" width="35" height="35">
+                                    Keras</h3>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_opencv.svg" alt="OpenCV" width="35" height="35">
+                                    OpenCV</h3>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_pytorch.svg" alt="Pytorch" width="35" height="35">
+                                    PyTorch</h3>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Análisis de datos -->
+                <div class="skills-category filterable" data-category="analisis">
+                    <h2><i class="fa-solid fa-chart-line"></i>Análisis de datos</h2>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_pandas.svg" alt="Pandas" width="35" height="35" />
+                                    Pandas</h3>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_numpy.svg" alt="NumPy" width="35px"/>NumPy</h3>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_matplotlib.svg" alt="Matplotlib" width="33" height="33">
+                                    Matplotlib</h3>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_plotly.svg" alt="Plotly" width="33" height="33">
+                                    Plotly</h3>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3><img src="../assets/images/icon_scikitlearn.svg" alt="ScikitLearn" width="35" height="35">
+                                    Scikit-Learn</h3>
+                                <span>40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Ariadna</h3>
+                    <p>Programación | IA | BBDD | Análisis de datos</p>
+                </div>
+            
+                
+                <div class="footer-social">
+                    <h3>Sígueme</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy;  Actualizado 15/04/2025.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/filters.js"></script>
+    <script src="../assets/js/skills.js"></script>
+</body>
+</html>
