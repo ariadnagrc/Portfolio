@@ -110,16 +110,29 @@ body, html {
     width: 100%;
     max-height: 300px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 220px; 
+    width: auto;
+    height: auto;
+    object-fit: contain; 
     border-radius: 6px;
     padding: 10px;
-    background-color: var(--bg-secondary-color);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.6s ease;
+    transform-origin: center;
 }
+
+.project-card:hover .project-image img {
+    transform: scale(1.4) rotate(-10deg);
+}
+
 
 /* Información del proyecto */
 .project-title-summary {
@@ -148,7 +161,7 @@ body, html {
 }
 
 .project-card:hover .project-details {
-    max-height: 500px; 
+    max-height: 900px; 
     padding-bottom: 30px;
 }
 
@@ -195,6 +208,107 @@ body, html {
     border: 1px dashed rgba(228, 152, 39, 0.3);
 }
 
+
+/* ======================
+   CARRUSEL EN DETALLES
+   ====================== */
+.project-carousel {
+    margin-top: 30px;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.project-carousel .carousel {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.project-carousel .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+    width: 100%; 
+}
+
+.project-carousel .carousel-item {
+    flex: 0 0 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.project-carousel .carousel-item img {
+    max-width: 100%;
+    max-height: 400px; 
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.project-carousel .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.project-carousel .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.project-carousel .carousel-control.prev {
+    left: 10px;
+}
+
+.project-carousel .carousel-control.next {
+    right: 10px;
+}
+
+.project-carousel .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+}
+
+.project-carousel .carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-carousel .carousel-indicators .indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
 /* ======================
    DISEÑO RESPONSIVE
    ====================== */
@@ -217,5 +331,22 @@ body, html {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-carousel .carousel-control {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    
+    .project-carousel .carousel-indicators {
+        bottom: 5px;
+    }
+    
+    .project-carousel .carousel-indicators .indicator {
+        width: 8px;
+        height: 8px;
     }
 }
