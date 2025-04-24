@@ -10,7 +10,7 @@ Estilos base y comunes - Modo oscuro
     --text-color: #f5f1db;
     --white: #f0f0f0;
     --black: #141414;
-    --bg-primary-color: #202022;
+    --bg-primary-color: #212121;
     --bg-secondary-color: #34353a;
     --card-primary-color: #b42727;
     --card-secondary-color: #1be725;
@@ -56,7 +56,7 @@ Estilos generales - selector de clase
     padding: 120px 0;
     padding-bottom: 150px;
     padding-top: 100px;
-    background: linear-gradient(180deg, #202022 0%, #35353a 100%);
+    background: linear-gradient(180deg, #212121 0%, #35353a 100%);
 }
 
 .section {
@@ -271,21 +271,26 @@ Estilos de sección bienvenida
 *****************************/
 .hero-section {
     position: relative;
-    width: 900px;
-    padding-top: 120px;
-    padding-bottom: 60px;
-    background: var(--card-bg);
+    width: 100%; 
+    max-width: 900px; 
+    padding: 80px 20px 40px;
+    margin: 0 auto;
     z-index: 1;
     overflow: hidden;
-    margin: 0 auto; 
 }
 
 .hero-image {
     width: 100%;
-    margin-right: 30px;
-    padding-right: 50px;
-    padding-left: 20px;
-    margin-top: 50px;
+    height: auto;
+    max-width: 100%; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.hero-image-container {
+    width: 100%;
+    padding: 0 15px; 
+    margin-top: 30px; 
 }
 
 /* Nueva sección de gradiente */
@@ -305,6 +310,18 @@ Estilos de sección bienvenida
 @media (max-width: 767px) {
     .gradient-transition {
         height: 70px;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .hero-section {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    
+    .hero-image-container {
+        margin-top: 15px;
     }
 }
 
