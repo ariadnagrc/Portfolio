@@ -50,6 +50,15 @@ Estilos generales - selector de clase
     padding: 0 15px;
     position: relative;
     z-index: 2; /* Encima de las constelaciones */
+    padding: 2rem 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px 0;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
 }
 
 .section-degradado {
@@ -84,6 +93,16 @@ Estilos generales - selector de clase
     margin: 15px auto;
 }
 
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title::after {
+        width: 60px;
+    }
+}
+
 .section-subtitle {
     text-align: center;
     color: var(--text-light);
@@ -103,6 +122,19 @@ Estilos generales - selector de clase
 .btn:hover {
     background: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .btn {
+        margin-top: 5px;
+        margin-left: 1px;
+        padding: 7px 29px;
+        background: var(--primary-color);
+        color: var(--bg-primary-color);
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-size: 0.8rem;
+    }
 }
 
 .text-center {
@@ -140,7 +172,7 @@ Estilos de la barra de navegación
 #navbar {
     background-color: var(--bg-primary-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
-    position: fixed;
+    position: relative;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -149,7 +181,6 @@ Estilos de la barra de navegación
 }
 
 body {
-    padding-top: 80px;
     background-color: var(--bg-primary-color);
 }
 
@@ -227,16 +258,22 @@ body {
     font-size: 1.5rem;
     color: var(--white);
     cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle .fa-times {
+    color: var(--accent-color-a);
 }
 
 /* Estilos para móvil */
 @media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
-    
-    #navbar .container {
-        padding: 10px 15px;
+    .menu-toggle {
+        display: block;
     }
     
     #navbar ul {
@@ -245,12 +282,12 @@ body {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background: var(--card-bg);
+        background: var(--bg-primary-color);
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
         transition: left 0.3s ease;
-        border-top: 1px solid var(--border-color);
+        z-index: 1000;
     }
     
     #navbar ul.active {
@@ -259,10 +296,6 @@ body {
     
     #navbar li {
         margin: 15px 0;
-    }
-    
-    .menu-toggle {
-        display: block;
     }
 }
 
@@ -292,6 +325,43 @@ Estilos de sección bienvenida
     padding: 0 15px; 
     margin-top: 30px; 
 }
+
+@media (max-width: 768px) {
+    .hero-section {
+      padding: 60px 15px 30px; /* Menos padding para pantallas medianas */
+    }
+  
+    .hero-image-container {
+      padding: 0 0px;
+      margin-top: 20px;
+      padding-right: 15px;
+    }
+  
+    .hero-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      padding: 50px 10px 20px; /* Aún más compacto para móviles pequeños */
+    }
+  
+    .hero-image-container {
+      padding: 0 0px;
+      margin-top: 15px;
+      padding-right: 15px;
+    }
+  
+    .hero-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
 
 /* Nueva sección de gradiente */
 .gradient-transition {
@@ -344,6 +414,14 @@ Estilos de sección sobre mí
     font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 0.8rem;       /* Letra ligeramente más pequeña */
+        line-height: 1.6;      /* Menos espacio entre líneas */
+        padding: 0 4%;         /* Un poco más de espacio lateral */
+    }
+}
+
 /* Grid de información - versión columnas */
 .info-grid {
     display: grid;
@@ -372,6 +450,22 @@ Estilos de sección sobre mí
     color: var(--primary-color);
     margin-bottom: 5px;
     font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .info-grid {
+        padding: 0 8%;
+        gap: 20px;
+    }
+
+    .info-item {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+
+    .info-item h3 {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -406,11 +500,11 @@ Estilos de sección proyectos
 ***************************/
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     gap: 30px;
     margin-top: 50px;
-    justify-content: center;
     justify-items: center;
+    padding: 0 5%;
 }
 
 .project-card {
@@ -477,6 +571,41 @@ Estilos de sección proyectos
     color: var(--white);
     margin-bottom: 15px;
     font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    /* Modificamos la grilla para que sea una sola columna */
+    .projects-grid {
+        grid-template-columns: 1fr;  /* Una sola columna */
+        gap: 20px;
+    }
+
+    /* En las tarjetas, se usa Flexbox para poner la imagen a la izquierda */
+    .project-card {
+        display: flex;  /* Usamos flexbox para organizar la imagen a la izquierda */
+        flex-direction: row; /* Dirección de los elementos: imagen a la izquierda, texto a la derecha */
+        padding: 10px; /* Espaciado interno para el contenido */
+    }
+
+    .project-image {
+        width: 100px;  /* Ajustamos el tamaño de la imagen */
+        height: 170px; /* Ajustamos el tamaño de la imagen */
+        margin-right: 15px; /* Separación entre la imagen y el texto */
+    }
+
+    .project-info {
+        flex: 1;  /* Hace que el texto ocupe el espacio restante */
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .project-info p {
+        font-size: 0.7rem;
+    }
+
+    .project-overlay {
+        padding: 15px;
+    }
 }
 
 
@@ -639,49 +768,58 @@ Estilos de sección habilidades
 /* Ajustes para móvil */
 @media (max-width: 768px) {
     .skills-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
     }
-    
+
     .skill-box {
-        width: 110px;
-        height: 110px;
-        padding: 15px;
+        width: calc(33.33% - 10px); /* 3 columnas */
+        max-width: 100px;
+        padding: 12px;
+        height: auto;
     }
-    
-    .skill-icon {
-        font-size: 2rem;
-        height: 50px;
-    }
-    
+
     .tech-logo {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-icon {
+        font-size: 1.2rem;
+        height: 40px;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
     }
 }
 
+/* Ajustes para móviles pequeños */
 @media (max-width: 480px) {
     .skills-row {
         gap: 10px;
     }
-    
+
     .skill-box {
-        width: 90px;
-        height: 90px;
-        padding: 12px;
+        width: calc(33.33% - 10px); /* 3 columnas */
+        max-width: 90px;
+        padding: 10px;
     }
-    
-    .skill-icon {
-        font-size: 1.8rem;
-        height: 40px;
-    }
-    
+
     .tech-logo {
         width: 35px;
         height: 35px;
     }
-    
+
+    .skill-icon {
+        font-size: 1rem;
+        height: 35px;
+    }
+
     .skill-name {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 }
 
@@ -767,3 +905,66 @@ footer {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr; /* Disposición en una sola columna */
+      gap: 30px;
+      text-align: center; /* Centra texto e íconos */
+    }
+  
+    .footer-about h3,
+    .footer-links h3,
+    .footer-social h3 {
+      font-size: 1.3rem;
+    }
+  
+    .footer-about p {
+      font-size: 0.95rem;
+    }
+  
+    .footer-links ul {
+      align-items: center;
+    }
+  
+    .footer-links a {
+      font-size: 0.95rem;
+    }
+  
+    .social-links {
+      justify-content: center;
+    }
+  
+    .social-links a {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-content {
+      gap: 25px;
+      padding: 0 15px;
+    }
+  
+    .footer-about h3,
+    .footer-links h3,
+    .footer-social h3 {
+      font-size: 1.1rem;
+    }
+  
+    .footer-about p {
+      font-size: 0.85rem;
+    }
+  
+    .footer-links a {
+      font-size: 0.85rem;
+    }
+  
+    .footer-bottom {
+      font-size: 0.8rem;
+      padding: 15px 0;
+    }
+  }
+  

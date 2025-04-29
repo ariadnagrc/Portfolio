@@ -14,7 +14,6 @@
    ====================== */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     color: var(--text-color);
 }
 
@@ -93,6 +92,63 @@ h1, .subtitle {
 .contact-info-item p a:hover {
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .contact-info {
+      gap: 20px;
+    }
+  
+    .contact-info-item {
+      padding: 10px;
+      padding-left: 18px;
+      text-align: left;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+  
+    .contact-info-item i {
+      font-size: 1.6rem;
+    }
+  
+    .contact-info-item h3 {
+      font-size: 1.1rem;
+    }
+  
+    .contact-info-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-info {
+      gap: 10px;
+    }
+  
+    .contact-info-item {
+      padding: 8px;
+      padding-left: 15px;
+      text-align: left;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    .contact-info-item i {
+      font-size: 1.4rem;
+    }
+  
+    .contact-info-item h3 {
+      font-size: 1rem;
+    }
+  
+    .contact-info-item p {
+      font-size: 0.85rem;
+    }
+  }
+  
 
 /* ======================
    FORMULARIO DE CONTACTO

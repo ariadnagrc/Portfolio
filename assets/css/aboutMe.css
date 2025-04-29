@@ -92,6 +92,23 @@
     border: 1px dashed rgba(228, 152, 39, 0.3);
 }
 
+@media (max-width: 768px) {
+    .tag {
+        font-size: 0.55rem; /* Reducir el tamaño de la fuente */
+        padding: 4px 10px; /* Ajustar el padding */
+        border-radius: 15px; /* Reducir ligeramente el radio del borde */
+    }
+}
+
+@media (max-width: 480px) {
+    .tag {
+        font-size: 0.55rem; /* Reducir aún más el tamaño de la fuente */
+        padding: 3px 8px; /* Ajustar el padding para pantallas muy pequeñas */
+        border-radius: 12px; /* Reducir más el radio del borde */
+    }
+}
+
+
 .info-item {
     display: flex;
     align-items: center;
@@ -108,6 +125,25 @@
     background: rgba(255, 185, 80, 0.2);
     transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+    .info-item {
+      min-width: 120px; /* Reducir el ancho mínimo para pantallas pequeñas */
+      padding: 6px 12px; /* Reducir el padding para hacer el contenido más compacto */
+      gap: 8px; /* Reducir el espacio entre los elementos */
+      margin-top: 1px; /* Reducir el margen superior para que no quede tan separado */
+    }
+
+    .info-text {
+        font-size: 0.7rem;
+    }
+  
+    .info-item:hover {
+      transform: translateY(-2px); /* Reducir la animación de hover */
+    }
+  }
+  
+  
 
 /* ======================
    ESTRUCTURA GENERAL
@@ -144,6 +180,43 @@ footer {
     font-size: 1.8rem;
 }
 
+@media (max-width: 768px) {
+    .about-section {
+      padding: 60px 15px;
+    }
+  
+    .section-header h2 {
+      font-size: 1.8rem;
+      gap: 8px;
+    }
+  
+    .section-header h2 i {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-section {
+      padding: 40px 10px;
+    }
+  
+    .section-header {
+      margin-bottom: 30px;
+    }
+  
+    .section-header h2 {
+      font-size: 1.5rem;
+      flex-direction: column;
+      gap: 5px;
+      text-align: center;
+    }
+  
+    .section-header h2 i {
+      font-size: 1.2rem;
+    }
+  }
+  
+
 /* ======================
    SECCIÓN HERO
    ====================== */
@@ -169,6 +242,36 @@ footer {
     font-size: 1.2rem;
     opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+    .hero-about {
+      padding: 40px 20px;
+    }
+  
+    .hero-about h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+  
+    .hero-about .subtitle {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-about {
+      padding: 30px 15px;
+    }
+  
+    .hero-about h1 {
+      font-size: 1.6rem;
+    }
+  
+    .hero-about .subtitle {
+      font-size: 0.9rem;
+    }
+  }
+  
 
 /* ======================
    SECCIÓN ABOUT ME
@@ -229,6 +332,57 @@ footer {
     justify-content: center;
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    .about-me-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 0 20px;
+    }
+  
+    .photo-frame {
+      width: 160px;
+      height: 150px;
+      margin-right: 0;
+      float: none;
+    }
+  
+    .intro-text-content {
+      text-align: center;
+    }
+  
+    .intro-text-content h3 {
+      font-size: 1.3rem;
+    }
+  
+    .personal-info-row {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .photo-frame {
+      width: 140px;
+      height: 130px;
+    }
+  
+    .intro-text-content h3 {
+      font-size: 1.1rem;
+    }
+
+    .intro-text-content {
+        font-size: 0.8rem;
+    }
+
+    .personal-info-row {
+        font-size: 0.8rem;
+        margin-top: 0px;
+    }
+  }
+  
 
 /* ======================
    SECCIÓN EDUCACIÓN
@@ -323,6 +477,84 @@ footer {
     left: -15px;
 }
 
+@media (max-width: 768px) {
+    .education-cards {
+        display: grid;
+        gap: 20px;
+        max-width: 100%;
+        margin: 0 15px;
+    }
+
+    .edu-card {
+        border-radius: 8px;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    }
+
+    .edu-card-content {
+        padding: 20px;
+    }
+
+    .edu-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .edu-date {
+        font-size: 0.75rem; 
+    }
+
+    .institution {
+        font-size: 0.85rem; 
+    }
+
+    .edu-tags {
+        gap: 6px; 
+    }
+
+    .edu-skills li {
+        font-size: 0.8rem; 
+    }
+
+    .edu-skills li::before {
+        left: -12px; 
+    }
+
+    .edu-card:hover {
+        transform: scale(1.02) translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    .edu-details {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-cards {
+        gap: 15px; 
+    }
+
+    .edu-card-content {
+        padding: 15px;
+    }
+
+    .edu-card h3 {
+        font-size: 0.9rem; 
+    }
+
+    .edu-date {
+        font-size: 0.7rem; 
+    }
+
+    .institution {
+        font-size: 0.8rem; /
+    }
+
+    .edu-skills li {
+        font-size: 0.75rem; 
+    }
+}
+
+
 /* ======================
    SECCIÓN IDIOMAS
    ====================== */
@@ -377,6 +609,57 @@ footer {
     margin: 5px 0 0;
     color: var(--text-color);
     font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .language-cards {
+        gap: 15px; /* Reducir el espacio entre tarjetas */
+    }
+
+    .language-card {
+        flex-direction: row; /* Cambiar la dirección para que las banderas estén a la izquierda y el texto a la derecha */
+        max-width: 90%; /* Hacer las tarjetas más pequeñas para móviles */
+    }
+
+    .flag-trapezoid {
+        width: 60px; /* Reducir el tamaño de la bandera */
+        height: 80px; /* Ajustar la altura */
+    }
+
+    .language-info {
+        padding: 10px 15px; /* Reducir padding */
+    }
+
+    .language-info h3 {
+        font-size: 1.1rem; /* Reducir el tamaño de la fuente */
+    }
+
+    .language-info p {
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .language-cards {
+        gap: 10px; /* Reducir más el espacio entre tarjetas */
+    }
+
+    .language-card {
+        max-width: 93%; /* Las tarjetas ocuparán todo el ancho disponible */
+    }
+
+    .flag-trapezoid {
+        width: 50px; /* Reducir aún más el tamaño de la bandera */
+        height: 75px; /* Ajustar la altura */
+    }
+
+    .language-info h3 {
+        font-size: 0.8rem; /* Reducir el tamaño de la fuente aún más */
+    }
+
+    .language-info p {
+        font-size: 0.85rem; /* Reducir el tamaño de la fuente */
+    }
 }
 
 /* ======================
@@ -526,6 +809,73 @@ footer {
     margin-top: 1px;
     margin-right: 1px;
     font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .hybrid-timeline {
+        padding-left: 50px; /* Reducir el padding izquierdo en móviles */
+    }
+
+    .ht-date {
+        left: -60px; /* Mover la fecha más cerca de la línea central */
+    }
+
+    .ht-card {
+        margin-left: 0; /* Quitar el margen izquierdo */
+        border-left: none; /* Eliminar la barra lateral */
+    }
+
+    .ht-item {
+        margin-bottom: 30px; /* Reducir el espacio entre items */
+    }
+
+    .ht-card h3 {
+        font-size: 1rem; /* Reducir el tamaño del título */
+    }
+
+    .ht-responsibilities h4 {
+        font-size: 0.9rem; /* Reducir el tamaño de los subtítulos */
+    }
+
+    .ht-responsibilities li {
+        font-size: 0.85rem; /* Reducir el tamaño de las responsabilidades */
+    }
+
+    .ht-badge {
+        left: 30px; /* Mover el badge más cerca de la línea de tiempo */
+    }
+
+    .ht-item:hover .ht-card {
+        transform: none; /* Quitar el efecto de movimiento */
+    }
+}
+
+@media (max-width: 480px) {
+    .hybrid-timeline {
+        padding-left: 20px; /* Ajustar más el padding en pantallas muy pequeñas */
+    }
+
+    .ht-date p {
+        left: -50px; /* Asegurar que la fecha siga alineada */
+        font-size: 0.65rem;
+    }
+
+    .ht-card h3 {
+        font-size: 0.9rem; /* Reducir aún más el tamaño del título */
+    }
+
+    .ht-responsibilities h4 {
+        font-size: 0.8rem; /* Ajustar subtítulos para pantallas muy pequeñas */
+    }
+
+    .ht-responsibilities li {
+        font-size: 0.8rem; /* Ajustar el tamaño de las responsabilidades */
+    }
+
+    .company {
+        font-size: 0.6rem;
+        margin-left: 40px;
+    }
 }
 
 /* ======================

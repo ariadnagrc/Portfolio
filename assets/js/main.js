@@ -2,17 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Año actual en el footer
     document.getElementById('year').textContent = new Date().getFullYear();
     
-    // Menú móvil mejorado
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navList = document.querySelector('#navbar ul');
-    
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navList.classList.toggle('active');
-        });
-    }
-    
     // Cerrar menú al hacer clic en un enlace (para móviles)
     document.querySelectorAll('#navbar a').forEach(link => {
         link.addEventListener('click', function() {
