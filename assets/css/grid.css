@@ -1,0 +1,12 @@
+/* ======================
+   GRID DE PROYECTOS
+   ====================== */
+   .projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+}

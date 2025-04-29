@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Ariadna García</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/template.css">
-    <link rel="stylesheet" href="assets/css/colors.css">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- CSS comunes -->
+    <link rel="stylesheet" href="../assets/css/template.css"> <!-- CSS diseño base -->
+    <link rel="stylesheet" href="../assets/css/colors.css"> <!-- CSS colores -->
+    <!-- Librería externa -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="main">
@@ -16,11 +19,11 @@
             <a class="logo">Ariadna García</a>
             <ul>
                 <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="aboutMe/">Sobre mí</a></li>
-                <li><a href="projects/">Proyectos</a></li>
-                <li><a href="skills/">Habilidades</a></li>
-                <li><a href="resources/">Recursos</a></li>
-                <li><a href="contact/">Contacto</a></li>
+                <li><a href="../aboutMe/">Sobre mí</a></li>
+                <li><a href="../projects/">Proyectos</a></li>
+                <li><a href="../skills/">Habilidades</a></li>
+                <li><a href="../resources/">Recursos</a></li>
+                <li><a href="../contact/">Contacto</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
@@ -31,7 +34,7 @@
     <!-- Hero Section con superposición -->
     <section id="hero" class="hero-section">
         <div class="hero-image-container">
-            <img src="assets/images/personal/inicio.png" alt="Ariadna García" class="hero-image">
+            <img src="../assets/images/personal/inicio.png" alt="Ariadna García" class="hero-image">
         </div>
     </section>
 
@@ -79,7 +82,7 @@
                 <!-- Proyecto 1 -->
                 <div class="project-card" data-project="proyecto1">
                     <div class="project-image">
-                        <img src="assets/images/icons/personal/icon_dataAlchemist.png" alt="Proyecto 1">
+                        <img src="../assets/images/icons/personal/icon_dataAlchemist.png" alt="Proyecto 1">
                         <div class="project-overlay">
                             <h3>Data Alchemist</h3>
                             <p>Tecnologías: Python, Pandas, Matplotlib</p>
@@ -95,7 +98,7 @@
                 <!-- Proyecto 2 -->
                 <div class="project-card" data-project="proyecto2">
                     <div class="project-image">
-                        <img src="assets/images/icons/personal/icon_DBledus.png" alt="DBledus">
+                        <img src="../assets/images/icons/personal/icon_DBledus.png" alt="DBledus">
                         <div class="project-overlay">
                             <h3>DBledus</h3>
                             <p>Tecnologías: Java, Sound API</p>
@@ -268,8 +271,8 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/menu-toggle.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/menu-toggle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>
