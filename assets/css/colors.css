@@ -1,0 +1,18 @@
+/***********************************
+Estilos base y comunes - Modo oscuro 
+***********************************/
+:root {
+    --primary-color: #ffb950;
+    --secondary-color: #ffe0b2;
+    --deselect-color: #ffb95054;
+    --accent-color-a: #e49827;
+    --accent-color-b: #ff0c5c;
+    --text-color: #f5f1db;
+    --white: #f0f0f0;
+    --black: #141414;
+    --bg-primary-color: #212121;
+    --bg-secondary-color: #34353a;
+    --card-primary-color: #b42727;
+    --card-secondary-color: #1be725;
+    --wave-color: rgba(228, 152, 39, 0.15);
+}

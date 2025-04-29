@@ -15,60 +15,6 @@ body, html {
 }
 
 /* ======================
-   FILTROS DE PROYECTOS
-   ====================== */
-.projects-filter {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.filter-btn {
-    margin-top: 50px; 
-    padding: 10px 30px;
-    margin-inline-start: 10px;
-    background: var(--primary-color);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.filter-btn.active {
-    background: var(--accent-color-a);
-    color: var(--bg-primary-color);
-    transform: scale(1.15);
-    margin-right: 7px;
-    margin-left: 18px;
-}
-
-.filter-btn:hover {
-    background: var(--accent-color-a);
-    transform: scale(1.15);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Clase para ocultar proyectos filtrados */
-.project-card.hidden {
-    display: none !important;
-}
-
-@media (max-width: 480px) {
-    .filter-btn {
-        padding: 8px 15px;
-        font-size: 0.8rem;
-    }
-
-    .filter-btn.active {
-        transform: scale(1.1);
-        margin-left: 10px;
-        margin-right: 5px;
-    }
-}
-
-
-/* ======================
    GRID DE PROYECTOS
    ====================== */
 .projects-grid {
@@ -93,6 +39,7 @@ body, html {
     width: 100%;
     max-width: 900px;
     background: var(--white);
+    border: 2px solid var(--deselect-color);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -103,6 +50,10 @@ body, html {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 2s ease;
+}
+
+.project-card:hover {
+    border: 2px solid var(--accent-color-a);
 }
 
 .project-card.visible {
