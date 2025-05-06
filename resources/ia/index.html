@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../style.css"> 
+    <!-- CSS comunes -->
+    <link rel="stylesheet" href="../resources.css">
+    <link rel="stylesheet" href="../../assets/css/stars.css"> <!-- CSS estrellas -->
+    <link rel="stylesheet" href="../../assets/css/grid.css"> <!-- CSS alineación -->
+    <link rel="stylesheet" href="../../assets/css/template.css"> <!-- CSS diseño base -->
+    <link rel="stylesheet" href="../../assets/css/colors.css"> <!-- CSS colores -->
+    <link rel="stylesheet" href="../../assets/css/filters.css"> <!-- CSS filtros -->
+    <!-- Librería externa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo">Ariadna García</a>
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../../aboutMe/">Sobre mí</a></li>
+                <li><a href="../../projects/">Proyectos</a></li>
+                <li><a href="../../skills/">Habilidades</a></li>
+                <li class="dropdown">
+                    <a href="../index.html" class="active">Recursos</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-menu" href="../backend/">Backend</a>
+                            <a class="dropdown-menu" href="../bbdd/">BBDD</a>
+                            <a class="dropdown-menu active" href="index.html">IA</a>
+                            <a class="dropdown-menu" href="../devops/index.html">DevOps</a>
+                        </div>
+                </li>
+                <li><a href="../../contact/">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="projects-main">
+        <section class="header">
+            <div class="container">
+                <h1>Inteligencia Artificial</h1>   
+                <p class="category-desc">La inteligencia artificial abarca técnicas como redes neuronales y transformers para dotar a las máquinas de capacidades de aprendizaje y razonamiento.</p>
+            </div>
+        </section>
+        <div class="projects-grid">
+            <!-- Recurso 1 -->
+            <div class="resource-card filterable" data-category="ia">
+                <div class="resource-header">
+                    <div class="resource-image">
+                        <img src="../../assets/images/books/IA_visionArtificial.png" alt="Guía de GIT" />
+                        <a href="#" download class="download-btn">
+                            <i class="fa-solid fa-square-xmark"></i>No disponible
+                        </a>
+                    </div>
+                    <div class="resource-title-summary">
+                        <h3>Pensando como una máquina. Visión artificial</h3>
+                        <p>Próximamente.</p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+            
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Ariadna</h3>
+                    <p>Programación | IA | BBDD | Análisis de datos</p>
+                </div>
+            
+                <div class="footer-social">
+                    <h3>Sígueme</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ariadnagrc" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Actualizado 06/05/2025.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/filters.js"></script>
+    <script src="../assets/js/resources.js"></script>
+    <script src="../assets/js/menu-toggle.js"></script>
+    <script src="../assets/js/stars-particles.js"></script>
+</body>
+</html>

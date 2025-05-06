@@ -23,7 +23,15 @@
                 <li><a href="../aboutMe/">Sobre mí</a></li>
                 <li><a href="../projects/">Proyectos</a></li>
                 <li><a href="index.html" class="active">Habilidades</a></li>
-                <li><a href="../resources/">Recursos</a></li>
+                <li class="dropdown">
+                    <a href="/resources/">Recursos</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-menu" href="/resources/backend/">Backend</a>
+                            <a class="dropdown-menu" href="/resources/bbdd/">BBDD</a>
+                            <a class="dropdown-menu" href="/resources/ia/">IA</a>
+                            <a class="dropdown-menu" href="/resources/devops/">DevOps</a>
+                        </div>
+                </li>
                 <li><a href="../contact/">Contacto</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle menu">
@@ -638,6 +646,7 @@
 
     <script src="../assets/js/filters.js"></script>
     <script src="../assets/js/skills.js"></script>
+    <script src="../assets/js/stars-particles.js"></script>
     <script src="../assets/js/menu-toggle.js"></script>
 </body>
 </html>

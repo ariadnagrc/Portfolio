@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="infinite-stars"></div>
     <header class="header">
         <nav id="navbar">
             <div class="container">
@@ -24,7 +23,15 @@
                     <li><a href="index.html" class="active">Sobre mí</a></li>
                     <li><a href="../projects/">Proyectos</a></li>
                     <li><a href="../skills/">Habilidades</a></li>
-                    <li><a href="../resources/">Recursos</a></li>
+                    <li class="dropdown">
+                        <a href="/resources/">Recursos</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-menu" href="/resources/backend/">Backend</a>
+                                <a class="dropdown-menu" href="/resources/bbdd/">BBDD</a>
+                                <a class="dropdown-menu" href="/resources/ia/">IA</a>
+                                <a class="dropdown-menu" href="/resources/devops/">DevOps</a>
+                            </div>
+                    </li>
                     <li><a href="../contact/">Contacto</a></li>
                 </ul>
                 <button class="menu-toggle" aria-label="Toggle menu">
@@ -71,13 +78,13 @@
             <!-- Texto principal (derecha) -->
             <div class="intro-text-content">
                 <h3 class="intro-text-content">¡Hola! Soy Ariadna</h3>
-                <p style="text-align: justify;">Desarrolladora en constante evolución, con una base sólida adquirida durante el grado superior en <strong><font color="#ff0c5c">Desarrollo de Aplicaciones Multiplataforma</font></strong>  y una fuerte vocación <strong><font color="#ff0c5c">autodidacta</font></strong>. Empecé en el mundo del desarrollo desde joven, motivada por la curiosidad y la necesidad de crear soluciones reales. A lo largo de mi formación he participado activamente en proyectos internacionales como <strong><font color="#ff0c5c">Erasmus+</font></strong> , donde ejercí de instructora y desarrolladora, y actualmente continuo ampliando mis conocimientos mediante proyectos personales centrados en <strong><font color="#ff0c5c">backend</font></strong>  y <strong><font color="#ff0c5c">bases de datos</font></strong>, sin dejar de lado el <strong><font color="#ff0c5c">frontend</font></strong>  y mi creciente interés por la <strong><font color="#ff0c5c">inteligencia artificial</font></strong>.</p>
+                <p style="text-align: justify;">Desarrolladora en constante evolución, con una base sólida adquirida durante el grado superior en <strong><font color="#ff0c5c">Desarrollo de Aplicaciones Multiplataforma</font></strong>  y una fuerte vocación <strong><font color="#ff0c5c">autodidacta</font></strong>. Empecé en el mundo del desarrollo desde joven, motivada por la curiosidad y la necesidad de crear soluciones reales. A lo largo de mi formación he participado activamente en proyectos internacionales como <strong><font color="#ff0c5c">Erasmus+</font></strong>, donde ejercí de instructora y desarrolladora.</p>
             </div>
             
             <!-- Mini-cards (fila debajo de la foto) -->
             <div class="personal-info-row">
                 <p class="intro-text" style="text-align: justify;">
-                    Actualmente continúo formándome de manera autodidacta, ya sea a través de cursos breves o mediante la realización de proyectos personales con nuevas tecnologías. Me enfoco especialmente en el desarrollo <strong><font color="#ff0c5c">backend</font></strong> y en <strong><font color="#ff0c5c">bases de datos</font></strong>, aunque también cuento con una sólida habilidad en el área de <strong><font color="#ff0c5c">frontend</font></strong>. En cuanto a la inteligencia artificial, es un campo que abordo como hobby, dedicando tiempo siempre que puedo a desarrollar pequeños proyectos que me ayuden a ganar soltura y experiencia práctica.
+                    Actualmente continúo formándome de manera autodidacta, ya sea a través de cursos breves o mediante la realización de proyectos personales con nuevas tecnologías. Me enfoco especialmente en el desarrollo <strong><font color="#ff0c5c">backend</font></strong> y en <strong><font color="#ff0c5c">bases de datos</font></strong>, aunque también cuento con una sólida habilidad en el área de <strong><font color="#ff0c5c">frontend</font></strong>. En cuanto a la <strong><font color="#ff0c5c">inteligencia artificial</font></strong>, es un campo que abordo como hobby, dedicando tiempo siempre que puedo a desarrollar pequeños proyectos que me ayuden a ganar soltura y experiencia práctica.
                 </p>
                 <p class="intro-text" style="text-align: justify; color: var(--secondary-color);">
                     <em>
@@ -110,34 +117,6 @@
                         <i class="fa-solid fa-cake-candles"></i>
                     </div>
                     <span class="info-text">24/04/2005</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="about-section languages-section">
-    <div class="container">
-        <div class="section-header">
-            <h2><i class="fas fa-language" style="color: #e49827;"></i>&nbsp;Idiomas</h2>
-            <div class="divider"></div>
-        </div>
-
-        <div class="language-cards">
-            <div class="language-card">
-                <div class="flag-trapezoid spain"></div>
-                <div class="language-info">
-                    <h3>Español</h3>
-                    <p>Nativo</p>
-                </div>
-            </div>
-
-            <div class="language-card">
-                <div class="flag-trapezoid uk"></div>
-                <div class="language-info">
-                    <h3>Inglés</h3>
-                    <p>Nivel B1 · Comunicación fluida y técnica</p>
                 </div>
             </div>
         </div>
@@ -322,6 +301,33 @@
                 </div>
                 <div class="ht-badge">
                     <i class="fas fa-code"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-section languages-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-language" style="color: #e49827;"></i>&nbsp;Idiomas</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="language-cards">
+            <div class="language-card">
+                <div class="flag-trapezoid spain"></div>
+                <div class="language-info">
+                    <h3>Español</h3>
+                    <p>Nativo</p>
+                </div>
+            </div>
+
+            <div class="language-card">
+                <div class="flag-trapezoid uk"></div>
+                <div class="language-info">
+                    <h3>Inglés</h3>
+                    <p>Nivel B1 · Comunicación fluida y técnica</p>
                 </div>
             </div>
         </div>

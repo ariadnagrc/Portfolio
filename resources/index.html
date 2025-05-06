@@ -7,6 +7,7 @@
     <!-- CSS principal -->
     <link rel="stylesheet" href="style.css"> 
     <!-- CSS comunes -->
+    <link rel="stylesheet" href="../assets/css/stars.css"> <!-- CSS estrellas -->
     <link rel="stylesheet" href="../assets/css/grid.css"> <!-- CSS alineación -->
     <link rel="stylesheet" href="../assets/css/template.css"> <!-- CSS diseño base -->
     <link rel="stylesheet" href="../assets/css/colors.css"> <!-- CSS colores -->
@@ -23,7 +24,15 @@
                 <li><a href="../aboutMe/">Sobre mí</a></li>
                 <li><a href="../projects/">Proyectos</a></li>
                 <li><a href="../skills/">Habilidades</a></li>
-                <li><a href="index.html" class="active">Recursos</a></li>
+                <li class="dropdown">
+                  <a href="index.html" class="active">Recursos</a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-menu" href="backend/">Backend</a>
+                          <a class="dropdown-menu" href="bbdd/">BBDD</a>
+                          <a class="dropdown-menu" href="ia/">IA</a>
+                          <a class="dropdown-menu" href="devops/">DevOps</a>
+                      </div>
+              </li>
                 <li><a href="../contact/">Contacto</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle menu">
@@ -39,208 +48,131 @@
                 <p class="subtitle">Guías, ejercicios y formación para impulsar tu aprendizaje</p>
             </div>
         </section>
-        
-        <div class="main-filter">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="ia">IA y Análisis</button>
-            <button class="filter-btn" data-filter="programacion">Programación</button>
-            <button class="filter-btn" data-filter="bd">BBDD</button>
-            <button class="filter-btn" data-filter="devops">DevOps</button>
-        </div>
-        
-        <div class="projects-grid">
-            <!-- Recurso 1 -->
-            <div class="resource-card filterable" data-category="devops">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/dominaGIT_basico.png" alt="Guía de GIT" />
-                        <a href="../assets/documents/dominaEXE/Domina GIT. Nivel básico.pdf" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
+        <section class="resources-intro-section">
+            <div class="container">
+              
+              <!-- Nuevo menú de categorías -->
+              <div class="categories-menu">
+                <h3 class="section-title">Explora por categorías</h3>
+                <div class="categories-grid">
+                  <a href="backend/" class="category-card">
+                    <div class="category-image">
+                      <img src="/assets/images/books/portada_programacion.png" alt="Programación">
+                      <div class="category-overlay"></div>
                     </div>
-                    <div class="resource-title-summary">
-                        <h3>Domina GIT. Nivel básico</h3>
-                        <p>Aprende a usar GIT para proyectos individuales.</p>
-                        <ul>
-                            <li>Configuración de usuarios.</li>
-                            <li>Creación de repositorios y subida de archivos.</li>
-                            <li>Clonación y actualización de repositorios.</li>
-                            <li>Historial de cambios (logs)</li>
-                            <li>Errores frecuentes y cómo solucionarlos</li>
-                            <li><em>Contiene esquemas para facilitar el aprendizaje</em></li>
-                        </ul>
+                    <div class="category-content">
+                      <h4 class="category-name">Backend</h4>
+                      <p class="category-desc">Desarrollo ágil de aplicaciones modulares, escalables y fáciles de mantener.</p>
                     </div>
-                </div>    
-            </div>
-            
-            <!-- Recurso 2 -->
-            <div class="resource-card filterable" data-category="devops">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/dominaGIT_intermedio.png" alt="Guía de GIT" />
-                        <a href="#" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
+                  </a>
+                  
+                  <a href="bbdd/" class="category-card">
+                    <div class="category-image">
+                      <img src="/assets/images/books/portada_bbdd.png" alt="Programación">
+                      <div class="category-overlay"></div>
                     </div>
-                    <div class="resource-title-summary">
-                        <h3>Domina GIT. Nivel intermedio</h3>
-                        <p>Próximamente.</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                    <div class="category-content">
+                      <h4 class="category-name">Bases de datos</h4>
+                      <p class="category-desc">Tecnologías, consultas y gestión eficiente de bases de datos.</p>
                     </div>
-                </div>    
-            </div>
-            
-            <!-- Recurso 3 -->
-            <div class="resource-card filterable" data-category="devops">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/dominaDOCKER_basico.png" alt="Guía de GIT" />
-                        <a href="#" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
+                  </a>
+                  
+                  <a href="ia/" class="category-card">
+                    <div class="category-image">
+                      <img src="/assets/images/books/portada_ia.png" alt="Programación">
+                      <div class="category-overlay"></div>
                     </div>
-                    <div class="resource-title-summary">
-                        <h3>Domina DOCKER. Nivel básico</h3>
-                        <p>Próximamente.</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                    <div class="category-content">
+                      <h4 class="category-name">IA</h4>
+                      <p class="category-desc">Procesamiento de imágenes, redes neuronales, transformers, NLP y más.</p>
                     </div>
-                </div>    
-            </div>
+                  </a>
+                  
+                  <a href="devops/" class="category-card">
+                    <div class="category-image">
+                      <img src="/assets/images/books/portada_devops.png" alt="Programación">
+                      <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-content">
+                      <h4 class="category-name">DevOps</h4>
+                      <p class="category-desc">Automatización, integración continua, despliegue y monitorización de aplicaciones.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              
+             <!--  <div class="featured-guides">
+                <h3 class="section-title">Guías Destacadas</h3>
+                <div class="guides-carousel">
+                  <div class="carousel-container">
+                    <button class="carousel-btn prev-btn" aria-label="Anterior">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6"/>
+                      </svg>
+                    </button>
+                    
+                    <div class="carousel-track">
+                      <div class="carousel-slide">
+                        <div class="guide-card">
+                          <div class="guide-image" style="background-image: url('https://via.placeholder.com/400x225');"></div>
+                          <div class="guide-content">
+                            <h4 class="guide-title">Guía para Principiantes</h4>
+                            <p class="guide-excerpt">Todo lo que necesitas saber para empezar desde cero en solo 7 días.</p>
+                            <a href="#" class="guide-link">Ver guía</a>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="carousel-slide">
+                        <div class="guide-card">
+                          <div class="guide-image" style="background-image: url('https://via.placeholder.com/400x225');"></div>
+                          <div class="guide-content">
+                            <h4 class="guide-title">Técnicas Avanzadas</h4>
+                            <p class="guide-excerpt">Domina las técnicas profesionales con esta guía paso a paso.</p>
+                            <a href="#" class="guide-link">Ver guía</a>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="carousel-slide">
+                        <div class="guide-card">
+                          <div class="guide-image" style="background-image: url('https://via.placeholder.com/400x225');"></div>
+                          <div class="guide-content">
+                            <h4 class="guide-title">Lista de Recursos</h4>
+                            <p class="guide-excerpt">Herramientas y recursos recomendados por nuestros expertos.</p>
+                            <a href="#" class="guide-link">Ver guía</a>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="carousel-slide">
+                        <div class="guide-card">
+                          <div class="guide-image" style="background-image: url('https://via.placeholder.com/400x225');"></div>
+                          <div class="guide-content">
+                            <h4 class="guide-title">Solución de Problemas</h4>
+                            <p class="guide-excerpt">Cómo identificar y resolver los problemas más comunes.</p>
+                            <a href="#" class="guide-link">Ver guía</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <button class="carousel-btn next-btn" aria-label="Siguiente">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  
+                  <div class="carousel-dots">
 
-            <!-- Recurso 4 -->
-            <div class="resource-card filterable" data-category="bd">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/dominaSQL_guiaCompleta.png" alt="Guía de GIT" />
-                        <a href="#" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
-                    </div>
-                    <div class="resource-title-summary">
-                        <h3>Domina SQL. Guía completa</h3>
-                        <p>Próximamente.</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>    
-            </div>
+                  </div>
+                </div>
+              </div> -->
+              
 
-            <!-- Recurso 5 -->
-            <div class="resource-card filterable" data-category="programacion">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/caminoAlCodigo_java.png" alt="Guía Java" />
-                        <a href="#" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
-                    </div>
-                    <div class="resource-title-summary">
-                        <h3>Camino al código. Java</h3>
-                        <p>Próximamente.</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>    
             </div>
-            
-            <!-- Recurso 6 -->
-            <div class="resource-card filterable" data-category="programacion">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/caminoAlCodigo_springboot.png" alt="Guía Spring Boot" />
-                        <a href="#" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
-                    </div>
-                    <div class="resource-title-summary">
-                        <h3>Camino al código. Spring Boot</h3>
-                        <p>Próximamente.</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>    
-            </div>
-
-            <!-- Recurso 7 -->
-            <div class="resource-card filterable" data-category="ia">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/IA_visionArtificial.png" alt="Guía de GIT" />
-                        <a href="#" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
-                    </div>
-                    <div class="resource-title-summary">
-                        <h3>Pensando como una máquina. Visión artificial</h3>
-                        <p>Próximamente.</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>    
-            </div>
-
-            <!-- Recurso 8 -->
-            <div class="resource-card filterable" data-category="programacion">
-                <div class="resource-header">
-                    <div class="resource-image">
-                        <img src="../assets/images/books/caminoAlCodigo_python.png" alt="Guía Python" />
-                        <a href="#" download class="download-btn">
-                            <i class="fas fa-download"></i> Descargar pdf
-                        </a>
-                    </div>
-                    <div class="resource-title-summary">
-                        <h3>Camino al código. Python</h3>
-                        <p>Próximamente.</p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>    
-            </div>
-
+          </section>
         </div>
     </main>
 
@@ -263,7 +195,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; Actualizado 15/04/2025.</p>
+                <p>&copy; Actualizado 06/05/2025.</p>
             </div>
         </div>
     </footer>
@@ -271,5 +203,6 @@
     <script src="../assets/js/filters.js"></script>
     <script src="../assets/js/resources.js"></script>
     <script src="../assets/js/menu-toggle.js"></script>
+    <script src="../assets/js/stars-particles.js"></script>
 </body>
 </html>

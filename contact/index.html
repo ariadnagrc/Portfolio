@@ -16,13 +16,21 @@
 <body>
     <nav id="navbar">
         <div class="container">
-            <a href="../main/" class="logo">Ariadna García</a>
+            <a href="/index.html" class="logo">Ariadna García</a>
             <ul>
-                <li><a href="../main/">Inicio</a></li>
+                <li><a href="/index.html">Inicio</a></li>
                 <li><a href="../aboutMe/">Sobre mí</a></li>
                 <li><a href="../projects/">Proyectos</a></li>
                 <li><a href="../skills/">Habilidades</a></li>
-                <li><a href="../resources/">Recursos</a></li>
+                <li class="dropdown">
+                    <a href="/resources/">Recursos</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-menu" href="/resources/backend/">Backend</a>
+                            <a class="dropdown-menu" href="/resources/bbdd/">BBDD</a>
+                            <a class="dropdown-menu" href="/resources/ia/">IA</a>
+                            <a class="dropdown-menu" href="/resources/devops/">DevOps</a>
+                        </div>
+                </li>
                 <li><a href="index.html" class="active">Contacto</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle menu">

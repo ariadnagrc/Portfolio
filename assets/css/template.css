@@ -24,6 +24,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 #navbar .logo {
@@ -133,6 +135,129 @@ body {
       margin: 15px 0;
   }
 }
+
+
+
+/********************************
+  Estilos definitivos del menú desplegable
+********************************/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  padding-top: 15px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-primary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 
+    opacity 1.6s ease,
+    max-height 1.6s ease,
+    transform 1.6s ease;
+  transform: translateY(-10px);
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  max-height: 500px; /* Valor mayor que la altura real del menú */
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--white);
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu a.active {
+  color: var(--primary-color);
+}
+
+/* Eliminar el espacio/tabulación no deseado */
+#navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+#navbar li {
+  margin: 0 15px; /* Ajuste de márgenes */
+  padding: 0;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  #navbar ul {
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--bg-primary-color);
+    transition: left 0.3s ease;
+    align-items: flex-start;
+  }
+  
+  #navbar ul.active {
+    left: 0;
+  }
+  
+  #navbar li {
+    margin: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+    max-height: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: none;
+  }
+  
+  .dropdown.active .dropdown-menu {
+    max-height: 500px;
+  }
+  
+  .dropdown-menu a {
+    padding-left: 30px;
+  }
+}
+
+
+
+
 
 /***************************************
 Estilos generales - selector de etiqueta

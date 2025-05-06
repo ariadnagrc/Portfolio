@@ -363,6 +363,7 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .language-card {
@@ -374,6 +375,11 @@
     overflow: hidden;
     width: 100%;
     max-width: 440px;
+    transition: all 0.7s ease;
+}
+
+.language-card:hover {
+    transform: scale(1.02) translateX(20px);
 }
 
 .flag-trapezoid {
@@ -608,6 +614,10 @@
     margin-top: 1px;
     margin-right: 1px;
     font-size: 0.8rem;
+}
+
+.experience-section {
+    margin-bottom: -80px;
 }
 
 @media (max-width: 768px) {
