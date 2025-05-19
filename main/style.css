@@ -3,6 +3,11 @@
     background-color: var(--bg-primary-color);
 }
 
+/* Puntero cuando se posa sobre el nombre */
+.logo {
+    cursor: pointer;
+}
+
 /*****************************
 Estilos de sección bienvenida
 *****************************/
